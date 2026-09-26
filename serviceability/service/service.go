@@ -9,10 +9,11 @@ import (
 
 type Service struct {
 	status repository.StoreStatusRepository
+	areas  repository.ServiceAreaRepository
 }
 
-func New(status repository.StoreStatusRepository) *Service {
-	return &Service{status: status}
+func New(status repository.StoreStatusRepository, areas repository.ServiceAreaRepository) *Service {
+	return &Service{status: status, areas: areas}
 }
 
 func (s *Service) RecordStatus(ctx context.Context, st entity.StoreStatus) error {

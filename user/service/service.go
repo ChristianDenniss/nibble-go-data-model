@@ -8,17 +8,19 @@ import (
 )
 
 type Service struct {
-	users    repository.UserRepository
-	settings repository.SettingsRepository
-	sessions repository.SessionRepository
+	users       repository.UserRepository
+	settings    repository.SettingsRepository
+	sessions    repository.SessionRepository
+	memberships repository.MembershipRepository
 }
 
 func New(
 	users repository.UserRepository,
 	settings repository.SettingsRepository,
 	sessions repository.SessionRepository,
+	memberships repository.MembershipRepository,
 ) *Service {
-	return &Service{users: users, settings: settings, sessions: sessions}
+	return &Service{users: users, settings: settings, sessions: sessions, memberships: memberships}
 }
 
 func (s *Service) RecordUser(ctx context.Context, u entity.User) error {
@@ -48,4 +50,14 @@ func (s *Service) SaveSession(ctx context.Context, sess entity.Session) error {
 
 func (s *Service) GetSession(ctx context.Context, id string) (entity.Session, error) {
 	return s.sessions.GetByID(ctx, id)
+}
+
+func (s *Service) ListMembershipSlugs(ctx context.Context, userID string) ([]string, error) {
+	if userID == "" {
+		return nil, entity.ErrIDRequired
+	}
+	if s.memberships == nil {
+		return nil, nil
+	}
+	return s.memberships.ListProductSlugsByUser(ctx, userID)
 }

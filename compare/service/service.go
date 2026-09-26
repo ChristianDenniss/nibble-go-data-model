@@ -17,6 +17,7 @@ import (
 	placesvc "github.com/ChristianDenniss/go-data-model/place/service"
 	quoteobssvc "github.com/ChristianDenniss/go-data-model/quoteobs/service"
 	resolutionsvc "github.com/ChristianDenniss/go-data-model/resolution/service"
+	serviceabilitysvc "github.com/ChristianDenniss/go-data-model/serviceability/service"
 	userentity "github.com/ChristianDenniss/go-data-model/user/entity"
 	usersvc "github.com/ChristianDenniss/go-data-model/user/service"
 )
@@ -27,7 +28,8 @@ type Service struct {
 	channels   *channelsvc.Service
 	resolution *resolutionsvc.Service
 	itemPrices *itempricesvc.Service
-	quotes     *quoteobssvc.Service
+	quotes           *quoteobssvc.Service
+	serviceability   *serviceabilitysvc.Service
 }
 
 func New(
@@ -37,14 +39,16 @@ func New(
 	resolution *resolutionsvc.Service,
 	itemPrices *itempricesvc.Service,
 	quotes *quoteobssvc.Service,
+	serviceability *serviceabilitysvc.Service,
 ) *Service {
 	return &Service{
-		places:     places,
-		users:      users,
-		channels:   channels,
-		resolution: resolution,
-		itemPrices: itemPrices,
-		quotes:     quotes,
+		places:           places,
+		users:            users,
+		channels:         channels,
+		resolution:       resolution,
+		itemPrices:       itemPrices,
+		quotes:           quotes,
+		serviceability:   serviceability,
 	}
 }
 
@@ -56,7 +60,10 @@ func (s *Service) Compare(ctx context.Context, userID string, req compareentity.
 		return compareentity.Result{}, userentity.Session{}, compareentity.ErrBasketRequired
 	}
 
-	req = s.applyUserDefaults(ctx, userID, req)
+	req, err := s.applyUserDefaults(ctx, userID, req)
+	if err != nil {
+		return compareentity.Result{}, userentity.Session{}, err
+	}
 
 	place, err := s.places.GetPlace(ctx, req.PlaceID)
 	if err != nil {
@@ -195,16 +202,24 @@ func newSessionID() string {
 	return "cmp_" + hex.EncodeToString(b[:])
 }
 
-func (s *Service) applyUserDefaults(ctx context.Context, userID string, req compareentity.Request) compareentity.Request {
-	if userID == "" || !comparePrefsEmpty(req.Filters) {
-		return req
+func (s *Service) applyUserDefaults(ctx context.Context, userID string, req compareentity.Request) (compareentity.Request, error) {
+	if userID == "" {
+		return req, nil
 	}
-	settings, err := s.users.GetSettings(ctx, userID)
-	if err != nil {
-		return req
+	if comparePrefsEmpty(req.Filters) {
+		settings, err := s.users.GetSettings(ctx, userID)
+		if err == nil {
+			req.Filters = settings.ComparePrefs
+		}
 	}
-	req.Filters = settings.ComparePrefs
-	return req
+	if len(req.Memberships) == 0 {
+		slugs, err := s.users.ListMembershipSlugs(ctx, userID)
+		if err != nil {
+			return req, err
+		}
+		req.Memberships = slugs
+	}
+	return req, nil
 }
 
 func comparePrefsEmpty(p userentity.ComparePrefs) bool {

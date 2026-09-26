@@ -15,6 +15,7 @@ import (
 	brand "github.com/ChristianDenniss/go-data-model/brand/entity"
 	cart "github.com/ChristianDenniss/go-data-model/cart/entity"
 	channel "github.com/ChristianDenniss/go-data-model/channel/entity"
+	compare "github.com/ChristianDenniss/go-data-model/compare/entity"
 	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
 	place "github.com/ChristianDenniss/go-data-model/place/entity"
 	source "github.com/ChristianDenniss/go-data-model/source/entity"
@@ -50,6 +51,13 @@ func main() {
 		{name: "SourceItem", v: source.Item{}},
 		{name: "User", v: user.User{}},
 		{name: "ComparePrefs", v: user.ComparePrefs{}},
+		{name: "CompareBasketLine", v: compare.BasketLine{}},
+		{name: "CompareBasket", v: compare.Basket{}},
+		{name: "CompareFulfillmentContext", v: compare.FulfillmentContext{}},
+		{name: "CompareDropoffPoint", v: compare.DropoffPoint{}},
+		{name: "CompareAPIPathRank", v: compare.APIPathRank{}},
+		{name: "CompareAPIUnavailablePath", v: compare.APIUnavailablePath{}},
+		{name: "CompareAPIResponse", v: compare.APICompareResponse{}},
 		{name: "Category", v: category.Category{}},
 		{name: "Cuisine", v: cuisine.Cuisine{}},
 		{name: "Restaurant", v: restaurant.Restaurant{}},

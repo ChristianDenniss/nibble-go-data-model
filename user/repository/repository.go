@@ -25,3 +25,7 @@ type SessionRepository interface {
 type OutboundClickRepository interface {
 	Insert(ctx context.Context, c entity.OutboundClick) error
 }
+
+type MembershipRepository interface {
+	ListProductSlugsByUser(ctx context.Context, userID string) ([]string, error)
+}

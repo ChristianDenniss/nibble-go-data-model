@@ -5,10 +5,11 @@ import (
 )
 
 type ServiceArea struct {
-	ID              string
-	SourceStoreID   string
-	FulfillmentMode string
-	Geometry        string
+	ID               string
+	SourceStoreID    string
+	FulfillmentMode  string
+	DeliveryExecutor string
+	Geometry         string
 }
 
 type HoursRegular struct {

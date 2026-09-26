@@ -33,6 +33,26 @@ func (s *Service) rankPaths(ctx context.Context, opts []placeentity.PurchaseOpti
 
 	for _, o := range opts {
 		spec := resolvePath(o, channelKinds)
+		geohash := quoteGeohash(req)
+		if s.serviceability != nil {
+			ok, code, err := s.serviceability.Deliverable(ctx, spec.Option.SourceStoreID, spec.Fulfillment, spec.Executor, geohash)
+			if err != nil {
+				unavailable = append(unavailable, compareentity.UnavailablePath{
+					PurchaseOptionID: spec.Option.ID,
+					Code:             "serviceability_error",
+					Message:          err.Error(),
+				})
+				continue
+			}
+			if !ok {
+				unavailable = append(unavailable, compareentity.UnavailablePath{
+					PurchaseOptionID: spec.Option.ID,
+					Code:             code,
+					Message:          "path not serviceable for this query",
+				})
+				continue
+			}
+		}
 		pr, unavail, ok := s.pricePath(ctx, spec, req)
 		if !ok {
 			unavailable = append(unavailable, unavail)
@@ -77,7 +97,7 @@ func (s *Service) pricePath(ctx context.Context, spec pathSpec, req compareentit
 		confidence = "low"
 	} else {
 		tier := membershipTier(req.Memberships)
-		quote, qErr := s.quotes.Latest(ctx, opt.SourceStoreID, dropoffGeohash, spec.Fulfillment, spec.Executor, tier)
+		quote, qErr := s.quotes.Latest(ctx, opt.SourceStoreID, dropoffGeohash, spec.Fulfillment, spec.Executor, tier, subtotal)
 		if qErr != nil {
 			if !errors.Is(qErr, quoteentity.ErrNotFound) {
 				quoteBullets = append(quoteBullets, fmt.Sprintf("quote lookup failed: %v", qErr))

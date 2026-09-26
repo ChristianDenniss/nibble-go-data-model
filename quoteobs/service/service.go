@@ -22,6 +22,6 @@ func (s *Service) Record(ctx context.Context, obs entity.Observation) error {
 	return s.repo.Insert(ctx, obs)
 }
 
-func (s *Service) Latest(ctx context.Context, sourceStoreID, geohash, mode, deliveryExecutor, tier string) (entity.Observation, error) {
-	return s.repo.Latest(ctx, sourceStoreID, geohash, mode, deliveryExecutor, tier)
+func (s *Service) Latest(ctx context.Context, sourceStoreID, geohash, mode, deliveryExecutor, tier string, basketSubtotalCents int64) (entity.Observation, error) {
+	return s.repo.Latest(ctx, sourceStoreID, geohash, mode, deliveryExecutor, tier, basketSubtotalCents)
 }

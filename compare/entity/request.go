@@ -47,20 +47,20 @@ type Result struct {
 }
 
 type PathRank struct {
-	PurchaseOptionID string
-	Rank             int
-	Kind             string
-	Headline         string
-	Confidence       string
-	AllIn            money.Money
-	FulfillmentMode  string
-	DeliveryExecutor string
-	ChannelID        string
-	RationaleBullets []string
+	PurchaseOptionID string       `json:"purchase_option_id"`
+	Rank             int          `json:"rank"`
+	Kind             string       `json:"kind"`
+	Headline         string       `json:"headline"`
+	Confidence       string       `json:"confidence"`
+	AllIn            money.Money  `json:"all_in"`
+	FulfillmentMode  string       `json:"fulfillment_mode"`
+	DeliveryExecutor string       `json:"delivery_executor"`
+	ChannelID        string       `json:"channel_id"`
+	RationaleBullets []string     `json:"rationale_bullets"`
 }
 
 type UnavailablePath struct {
-	PurchaseOptionID string
-	Code             string
-	Message          string
+	PurchaseOptionID string `json:"purchase_option_id"`
+	Code             string `json:"code"`
+	Message          string `json:"message"`
 }

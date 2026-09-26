@@ -29,6 +29,117 @@ export interface Provider {
   name: string
 }
 
+export interface Channel {
+  id: string
+  slug: string
+  kind: string
+  name: string
+}
+
+export interface Brand {
+  id: string
+  slug: string
+  name: string
+}
+
+export interface Place {
+  id: string
+  brandId: string
+  name: string
+  location: Location
+}
+
+export interface Dish {
+  id: string
+  brandId: string
+  name: string
+  canonicalName: string
+  description: string
+}
+
+export interface SourceStore {
+  id: string
+  channelId: string
+  externalStoreId: string
+  name: string
+  location: Location
+  phone: string
+}
+
+export interface SourceItem {
+  id: string
+  sourceCategoryId: string
+  externalItemId: string
+  name: string
+  description: string
+  available: boolean
+}
+
+export interface User {
+  id: string
+  name: string
+  email: string
+  phone: string
+}
+
+export interface ComparePrefs {
+  allowedFulfillmentModes: string[]
+  willingToUseAggregator: boolean
+  allowedChannelIds: string[]
+  blockedChannelIds: string[]
+  driveThruOK: boolean
+  merchantDirectOK: boolean
+}
+
+export interface CompareBasketLine {
+  dishId: string
+  sourceItemId: string
+  quantity: number
+}
+
+export interface CompareBasket {
+  lines: BasketLine[]
+}
+
+export interface CompareFulfillmentContext {
+  mode: string
+  dropoff: DropoffPoint | null
+}
+
+export interface CompareDropoffPoint {
+  latitude: number
+  longitude: number
+  label: string
+}
+
+export interface CompareAPIPathRank {
+  purchaseOptionId: string
+  rank: number
+  kind: string
+  headline: string
+  confidence: string
+  allIn: Money
+  fulfillmentMode: string
+  deliveryExecutor: string
+  channelId: string
+  rationaleBullets: string[]
+}
+
+export interface CompareAPIUnavailablePath {
+  purchaseOptionId: string
+  code: string
+  message: string
+}
+
+export interface CompareAPIResponse {
+  compareSessionId: string
+  observedAt: string
+  pathsRanked: number
+  recommendation: APIPathRank | null
+  runnersUp: APIPathRank[]
+  unavailablePaths: APIUnavailablePath[]
+}
+
 export interface Category {
   id: string
   slug: string
