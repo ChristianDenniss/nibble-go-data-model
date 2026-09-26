@@ -12,7 +12,13 @@ import (
 	"time"
 
 	account "github.com/ChristianDenniss/go-data-model/account/entity"
+	brand "github.com/ChristianDenniss/go-data-model/brand/entity"
 	cart "github.com/ChristianDenniss/go-data-model/cart/entity"
+	channel "github.com/ChristianDenniss/go-data-model/channel/entity"
+	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
+	place "github.com/ChristianDenniss/go-data-model/place/entity"
+	source "github.com/ChristianDenniss/go-data-model/source/entity"
+	user "github.com/ChristianDenniss/go-data-model/user/entity"
 	category "github.com/ChristianDenniss/go-data-model/category/entity"
 	cuisine "github.com/ChristianDenniss/go-data-model/cuisine/entity"
 	location "github.com/ChristianDenniss/go-data-model/location/entity"
@@ -36,6 +42,14 @@ func main() {
 		{name: "Location", v: location.Location{}},
 		{name: "Rating", v: restaurant.Rating{}},
 		{name: "Provider", v: provider.Provider{}},
+		{name: "Channel", v: channel.Channel{}},
+		{name: "Brand", v: brand.Brand{}},
+		{name: "Place", v: place.Place{}},
+		{name: "Dish", v: dish.Dish{}},
+		{name: "SourceStore", v: source.Store{}},
+		{name: "SourceItem", v: source.Item{}},
+		{name: "User", v: user.User{}},
+		{name: "ComparePrefs", v: user.ComparePrefs{}},
 		{name: "Category", v: category.Category{}},
 		{name: "Cuisine", v: cuisine.Cuisine{}},
 		{name: "Restaurant", v: restaurant.Restaurant{}},
