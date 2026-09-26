@@ -36,6 +36,37 @@ export interface Channel {
   name: string
 }
 
+export interface Market {
+  id: string
+  slug: string
+  name: string
+  country: string
+  region: string
+  currency: string
+  timezone: string
+  status: string
+  geohashPrefixes: string
+}
+
+export interface ProbeDropoff {
+  id: string
+  marketId: string
+  label: string
+  geohash: string
+  location: Location
+}
+
+export interface ChannelCoverage {
+  id: string
+  channelId: string
+  marketId: string
+  status: string
+  storeCount: number
+  ingestRunId: string
+  note: string
+  lastObservedAt: string | null
+}
+
 export interface Brand {
   id: string
   slug: string
@@ -66,6 +97,22 @@ export interface SourceStore {
   phone: string
 }
 
+export interface SourceMenu {
+  id: string
+  sourceStoreId: string
+  fulfillmentMode: string
+  deliveryExecutor: string
+  externalMenuId: string
+}
+
+export interface SourceCategory {
+  id: string
+  sourceMenuId: string
+  externalCategoryId: string
+  name: string
+  sortOrder: number
+}
+
 export interface SourceItem {
   id: string
   sourceCategoryId: string
@@ -73,6 +120,23 @@ export interface SourceItem {
   name: string
   description: string
   available: boolean
+}
+
+export interface SourceMenuItemView {
+  item: SourceItem
+  priceCents: number
+  currency: string
+}
+
+export interface SourceCategoryWithItems {
+  category: SourceCategory
+  items: SourceMenuItemView[]
+}
+
+export interface SourceMenuBrowse {
+  store: SourceStore
+  menu: SourceMenu
+  categories: SourceCategoryWithItems[]
 }
 
 export interface User {
@@ -98,12 +162,12 @@ export interface CompareBasketLine {
 }
 
 export interface CompareBasket {
-  lines: BasketLine[]
+  lines: CompareBasketLine[]
 }
 
 export interface CompareFulfillmentContext {
   mode: string
-  dropoff: DropoffPoint | null
+  dropoff: CompareDropoffPoint | null
 }
 
 export interface CompareDropoffPoint {
@@ -135,9 +199,9 @@ export interface CompareAPIResponse {
   compareSessionId: string
   observedAt: string
   pathsRanked: number
-  recommendation: APIPathRank | null
-  runnersUp: APIPathRank[]
-  unavailablePaths: APIUnavailablePath[]
+  recommendation: CompareAPIPathRank | null
+  runnersUp: CompareAPIPathRank[]
+  unavailablePaths: CompareAPIUnavailablePath[]
 }
 
 export interface Category {
