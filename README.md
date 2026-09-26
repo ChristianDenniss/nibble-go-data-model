@@ -17,6 +17,8 @@ Contexts (legacy, still wired for ingest v1): `restaurant`, `menu`, `offer`, `ob
 
 Target contexts: `channel`, `ingest`, `source`, `brand`, `place`, `dish`, `resolution`, `itemprice`, `quoteobs`, `promotion`, `serviceability`, `user`, `compare`.
 
+Read models: `storefront` (legacy catalog bundle for the web browse experience).
+
 `money`, `location`, and `restaurant/entity.Rating` are value objects. They have no repository.
 
 TypeScript for the browser is generated from these structs (`go run ./cmd/gentypes`). Do not redefine them in `nibble-web-platform`.
