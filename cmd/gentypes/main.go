@@ -16,6 +16,7 @@ import (
 	cart "github.com/ChristianDenniss/go-data-model/cart/entity"
 	channel "github.com/ChristianDenniss/go-data-model/channel/entity"
 	compare "github.com/ChristianDenniss/go-data-model/compare/entity"
+	market "github.com/ChristianDenniss/go-data-model/market/entity"
 	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
 	place "github.com/ChristianDenniss/go-data-model/place/entity"
 	source "github.com/ChristianDenniss/go-data-model/source/entity"
@@ -37,6 +38,8 @@ type named struct {
 	v    any
 }
 
+var tsNameByType = map[string]string{}
+
 func main() {
 	typesToEmit := []named{
 		{name: "Money", v: money.Money{}},
@@ -44,11 +47,19 @@ func main() {
 		{name: "Rating", v: restaurant.Rating{}},
 		{name: "Provider", v: provider.Provider{}},
 		{name: "Channel", v: channel.Channel{}},
+		{name: "Market", v: market.Market{}},
+		{name: "ProbeDropoff", v: market.ProbeDropoff{}},
+		{name: "ChannelCoverage", v: market.ChannelCoverage{}},
 		{name: "Brand", v: brand.Brand{}},
 		{name: "Place", v: place.Place{}},
 		{name: "Dish", v: dish.Dish{}},
 		{name: "SourceStore", v: source.Store{}},
+		{name: "SourceMenu", v: source.Menu{}},
+		{name: "SourceCategory", v: source.Category{}},
 		{name: "SourceItem", v: source.Item{}},
+		{name: "SourceMenuItemView", v: source.MenuItemView{}},
+		{name: "SourceCategoryWithItems", v: source.CategoryWithItems{}},
+		{name: "SourceMenuBrowse", v: source.MenuBrowse{}},
 		{name: "User", v: user.User{}},
 		{name: "ComparePrefs", v: user.ComparePrefs{}},
 		{name: "CompareBasketLine", v: compare.BasketLine{}},
@@ -71,6 +82,11 @@ func main() {
 		{name: "Cart", v: cart.Cart{}},
 		{name: "OrderLine", v: order.OrderLine{}},
 		{name: "Order", v: order.Order{}},
+	}
+
+	for _, item := range typesToEmit {
+		t := reflect.TypeOf(item.v)
+		tsNameByType[typeKey(t)] = item.name
 	}
 
 	var body bytes.Buffer
@@ -157,12 +173,22 @@ func lowerFirst(s string) string {
 	return strings.ToLower(s[:1]) + s[1:]
 }
 
+func typeKey(t reflect.Type) string {
+	if t.Name() == "" {
+		return ""
+	}
+	return t.PkgPath() + "." + t.Name()
+}
+
 func tsTypeOf(t reflect.Type) string {
 	if t == reflect.TypeOf(time.Time{}) {
 		return "string"
 	}
 	if t.PkgPath() == "github.com/ChristianDenniss/go-data-model/order/entity" && t.Name() == "Status" {
 		return "OrderStatus"
+	}
+	if name := tsNameByType[typeKey(t)]; name != "" {
+		return name
 	}
 	switch t.Kind() {
 	case reflect.String:
@@ -176,9 +202,6 @@ func tsTypeOf(t reflect.Type) string {
 	case reflect.Slice:
 		return tsTypeOf(t.Elem()) + "[]"
 	case reflect.Struct:
-		if t.Name() != "" {
-			return t.Name()
-		}
 		return "Record<string, unknown>"
 	case reflect.Pointer:
 		return tsTypeOf(t.Elem()) + " | null"
