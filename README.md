@@ -15,4 +15,7 @@ restaurant/
 
 `money` and `location` are value objects. They have no repository.
 
+Services should pin **`v1.1.0` or later**. Tag `v1.0.0` is the pre-split scaffold
+and does not contain these packages.
+
 Storage adapters (see `go-data-store`) implement the repository interfaces. Transports (see `api-engine`) call the services.
