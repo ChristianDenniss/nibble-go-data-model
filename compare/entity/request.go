@@ -8,33 +8,33 @@ import (
 )
 
 type Request struct {
-	PlaceID            string
-	FulfillmentContext FulfillmentContext
-	Basket             Basket
-	Filters            userentity.ComparePrefs
-	Memberships        []string
-	QuotePreference    string
+	PlaceID            string                   `json:"place_id"`
+	FulfillmentContext FulfillmentContext       `json:"fulfillment_context"`
+	Basket             Basket                   `json:"basket"`
+	Filters            userentity.ComparePrefs  `json:"filters"`
+	Memberships        []string                 `json:"memberships"`
+	QuotePreference    string                   `json:"quote_preference"`
 }
 
 type FulfillmentContext struct {
-	Mode    string
-	Dropoff *DropoffPoint
+	Mode    string        `json:"mode"`
+	Dropoff *DropoffPoint `json:"dropoff,omitempty"`
 }
 
 type DropoffPoint struct {
-	Latitude  float64
-	Longitude float64
-	Label     string
+	Latitude  float64 `json:"latitude"`
+	Longitude float64 `json:"longitude"`
+	Label     string  `json:"label,omitempty"`
 }
 
 type Basket struct {
-	Lines []BasketLine
+	Lines []BasketLine `json:"lines"`
 }
 
 type BasketLine struct {
-	DishID       string
-	SourceItemID string
-	Quantity     int
+	DishID       string `json:"dish_id,omitempty"`
+	SourceItemID string `json:"source_item_id,omitempty"`
+	Quantity     int    `json:"quantity"`
 }
 
 type Result struct {
