@@ -83,3 +83,16 @@ func TestValidation(t *testing.T) {
 		}
 	}
 }
+
+func TestSkipJoinsOnlyReviewedBranch(t *testing.T) {
+	b := fixture()
+	url := "https://www.skipthedishes.com/taco-boyz-520"
+	b.Providers["SkipTheDishes"] = Snapshot{City: "Fredericton", Region: "NB", RetrievedAt: "2026-09-27T00:00:00Z", Stores: []Store{{ID: StoreID("SkipTheDishes", url), Name: "Taco Boyz", URL: url, SourceAge: "2 weeks", Items: []MenuItem{{Name: "Large Nachos", Amount: price(1500), Currency: "CAD"}}}}}
+	if err := b.Validate(); err != nil {
+		t.Fatal(err)
+	}
+	c := Build(b)
+	if len(c.Restaurants) != 1 || len(c.Restaurants[0].Providers) != 3 || len(c.Restaurants[0].Items[0].Offers) != 3 {
+		t.Fatal("Skip branch not merged")
+	}
+}

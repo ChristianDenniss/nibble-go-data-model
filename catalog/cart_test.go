@@ -57,3 +57,25 @@ func TestCartValidationAndOverflow(t *testing.T) {
 		t.Fatal("overflow accepted")
 	}
 }
+
+func TestRankDoesNotCallIncompleteOrStartingBasketsCheapest(t *testing.T) {
+	providers := []ProviderCart{
+		{Provider: "Incomplete", KnownSubtotal: 1},
+		{Provider: "Starting", Complete: true, StartingPrice: true, Subtotal: price(2)},
+		{Provider: "DoorDash", Complete: true, Subtotal: price(1300)},
+		{Provider: "SkipTheDishes", Complete: true, Subtotal: price(1200)},
+		{Provider: "Uber Eats", Complete: true, Subtotal: price(1200)},
+	}
+	RankCarts(providers)
+	if providers[0].Provider != "SkipTheDishes" || !providers[0].LowestListedSubtotal || !providers[1].LowestListedSubtotal {
+		t.Fatal("ties not ranked correctly")
+	}
+	for _, p := range providers {
+		if (!p.Complete || p.StartingPrice) && p.LowestListedSubtotal {
+			t.Fatal("unknown basket ranked cheapest")
+		}
+		if p.Total != nil {
+			t.Fatal("delivered total invented")
+		}
+	}
+}
