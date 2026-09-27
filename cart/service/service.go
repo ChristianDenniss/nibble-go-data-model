@@ -22,6 +22,9 @@ func (s *Service) Record(ctx context.Context, c entity.Cart) error {
 	return s.repo.Upsert(ctx, c)
 }
 
+// Replace atomically replaces the comparison basket.
+func (s *Service) Replace(ctx context.Context, c entity.Cart) error { return s.Record(ctx, c) }
+
 func (s *Service) GetByID(ctx context.Context, id string) (entity.Cart, error) {
 	if id == "" {
 		return entity.Cart{}, entity.ErrIDRequired

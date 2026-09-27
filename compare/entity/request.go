@@ -57,6 +57,22 @@ type PathRank struct {
 	DeliveryExecutor string       `json:"delivery_executor"`
 	ChannelID        string       `json:"channel_id"`
 	RationaleBullets []string     `json:"rationale_bullets"`
+	ProviderID       string       `json:"provider_id,omitempty"`
+	ProviderName     string       `json:"provider_name,omitempty"`
+	RestaurantID     string       `json:"restaurant_id,omitempty"`
+	MenuItemID       string       `json:"menu_item_id,omitempty"`
+	ItemName         string       `json:"item_name,omitempty"`
+	ItemSubtotal     money.Money  `json:"item_subtotal,omitempty"`
+	Fees             []FeeLine    `json:"fees,omitempty"`
+	DeliveryCost     money.Money  `json:"delivery_cost,omitempty"`
+	ServiceFee       money.Money  `json:"service_fee,omitempty"`
+	EtaMinutes       int          `json:"eta_minutes,omitempty"`
+	HandoffURL       string       `json:"handoff_url,omitempty"`
+}
+
+type FeeLine struct {
+	Kind   string      `json:"kind"`
+	Amount money.Money `json:"amount"`
 }
 
 type UnavailablePath struct {

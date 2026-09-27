@@ -1,4 +1,4 @@
-﻿// Generates TypeScript interfaces from go-data-model entities.
+// Generates TypeScript interfaces from go-data-model entities.
 // Run from the module root: go run ./cmd/gentypes
 package main
 
@@ -14,28 +14,34 @@ import (
 	account "github.com/ChristianDenniss/go-data-model/account/entity"
 	brand "github.com/ChristianDenniss/go-data-model/brand/entity"
 	cart "github.com/ChristianDenniss/go-data-model/cart/entity"
+	category "github.com/ChristianDenniss/go-data-model/category/entity"
 	channel "github.com/ChristianDenniss/go-data-model/channel/entity"
 	compare "github.com/ChristianDenniss/go-data-model/compare/entity"
-	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
-	place "github.com/ChristianDenniss/go-data-model/place/entity"
-	source "github.com/ChristianDenniss/go-data-model/source/entity"
-	user "github.com/ChristianDenniss/go-data-model/user/entity"
-	category "github.com/ChristianDenniss/go-data-model/category/entity"
 	cuisine "github.com/ChristianDenniss/go-data-model/cuisine/entity"
+	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
+	home "github.com/ChristianDenniss/go-data-model/home/entity"
 	location "github.com/ChristianDenniss/go-data-model/location/entity"
+	market "github.com/ChristianDenniss/go-data-model/market/entity"
 	menu "github.com/ChristianDenniss/go-data-model/menu/entity"
+	merchandising "github.com/ChristianDenniss/go-data-model/merchandising/entity"
 	money "github.com/ChristianDenniss/go-data-model/money/entity"
 	observation "github.com/ChristianDenniss/go-data-model/observation/entity"
 	offer "github.com/ChristianDenniss/go-data-model/offer/entity"
 	order "github.com/ChristianDenniss/go-data-model/order/entity"
+	place "github.com/ChristianDenniss/go-data-model/place/entity"
+	promotion "github.com/ChristianDenniss/go-data-model/promotion/entity"
 	provider "github.com/ChristianDenniss/go-data-model/provider/entity"
 	restaurant "github.com/ChristianDenniss/go-data-model/restaurant/entity"
+	source "github.com/ChristianDenniss/go-data-model/source/entity"
+	user "github.com/ChristianDenniss/go-data-model/user/entity"
 )
 
 type named struct {
 	name string
 	v    any
 }
+
+var tsNameByType = map[string]string{}
 
 func main() {
 	typesToEmit := []named{
@@ -44,11 +50,19 @@ func main() {
 		{name: "Rating", v: restaurant.Rating{}},
 		{name: "Provider", v: provider.Provider{}},
 		{name: "Channel", v: channel.Channel{}},
+		{name: "Market", v: market.Market{}},
+		{name: "ProbeDropoff", v: market.ProbeDropoff{}},
+		{name: "ChannelCoverage", v: market.ChannelCoverage{}},
 		{name: "Brand", v: brand.Brand{}},
 		{name: "Place", v: place.Place{}},
 		{name: "Dish", v: dish.Dish{}},
 		{name: "SourceStore", v: source.Store{}},
+		{name: "SourceMenu", v: source.Menu{}},
+		{name: "SourceCategory", v: source.Category{}},
 		{name: "SourceItem", v: source.Item{}},
+		{name: "SourceMenuItemView", v: source.MenuItemView{}},
+		{name: "SourceCategoryWithItems", v: source.CategoryWithItems{}},
+		{name: "SourceMenuBrowse", v: source.MenuBrowse{}},
 		{name: "User", v: user.User{}},
 		{name: "ComparePrefs", v: user.ComparePrefs{}},
 		{name: "CompareBasketLine", v: compare.BasketLine{}},
@@ -60,6 +74,7 @@ func main() {
 		{name: "CompareAPIResponse", v: compare.APICompareResponse{}},
 		{name: "Category", v: category.Category{}},
 		{name: "Cuisine", v: cuisine.Cuisine{}},
+		{name: "RestaurantHours", v: restaurant.Hours{}},
 		{name: "Restaurant", v: restaurant.Restaurant{}},
 		{name: "Item", v: menu.Item{}},
 		{name: "Offer", v: offer.Offer{}},
@@ -71,6 +86,25 @@ func main() {
 		{name: "Cart", v: cart.Cart{}},
 		{name: "OrderLine", v: order.OrderLine{}},
 		{name: "Order", v: order.Order{}},
+		{name: "Promotion", v: promotion.Promotion{}},
+		{name: "PromotionConstraint", v: promotion.Constraint{}},
+		{name: "PromotionTarget", v: promotion.Target{}},
+		{name: "MembershipProduct", v: promotion.MembershipProduct{}},
+		{name: "Advertiser", v: merchandising.Advertiser{}},
+		{name: "SponsoredCampaign", v: merchandising.Campaign{}},
+		{name: "SponsoredPlacement", v: merchandising.Placement{}},
+		{name: "SponsoredEvent", v: merchandising.Event{}},
+		{name: "SponsoredMark", v: home.SponsoredMark{}},
+		{name: "DealBadge", v: home.DealBadge{}},
+		{name: "HomeBanner", v: home.Banner{}},
+		{name: "HomeFeedItem", v: home.FeedItem{}},
+		{name: "HomeSection", v: home.Section{}},
+		{name: "HomeFeed", v: home.Feed{}},
+	}
+
+	for _, item := range typesToEmit {
+		t := reflect.TypeOf(item.v)
+		tsNameByType[typeKey(t)] = item.name
 	}
 
 	var body bytes.Buffer
@@ -157,12 +191,22 @@ func lowerFirst(s string) string {
 	return strings.ToLower(s[:1]) + s[1:]
 }
 
+func typeKey(t reflect.Type) string {
+	if t.Name() == "" {
+		return ""
+	}
+	return t.PkgPath() + "." + t.Name()
+}
+
 func tsTypeOf(t reflect.Type) string {
 	if t == reflect.TypeOf(time.Time{}) {
 		return "string"
 	}
 	if t.PkgPath() == "github.com/ChristianDenniss/go-data-model/order/entity" && t.Name() == "Status" {
 		return "OrderStatus"
+	}
+	if name := tsNameByType[typeKey(t)]; name != "" {
+		return name
 	}
 	switch t.Kind() {
 	case reflect.String:
@@ -176,9 +220,6 @@ func tsTypeOf(t reflect.Type) string {
 	case reflect.Slice:
 		return tsTypeOf(t.Elem()) + "[]"
 	case reflect.Struct:
-		if t.Name() != "" {
-			return t.Name()
-		}
 		return "Record<string, unknown>"
 	case reflect.Pointer:
 		return tsTypeOf(t.Elem()) + " | null"

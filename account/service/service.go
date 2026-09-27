@@ -28,3 +28,23 @@ func (s *Service) GetByID(ctx context.Context, id string) (entity.Account, error
 	}
 	return s.repo.GetByID(ctx, id)
 }
+
+func (s *Service) RemoveSavedAddress(ctx context.Context, accountID, addressID string) error {
+	if accountID == "" {
+		return entity.ErrIDRequired
+	}
+	if addressID == "" {
+		return entity.ErrAddressIDRequired
+	}
+	return s.repo.DeleteSavedAddress(ctx, accountID, addressID)
+}
+
+func (s *Service) SelectSavedAddress(ctx context.Context, accountID, addressID string) error {
+	if accountID == "" {
+		return entity.ErrIDRequired
+	}
+	if addressID == "" {
+		return entity.ErrAddressIDRequired
+	}
+	return s.repo.SetCurrentSavedAddress(ctx, accountID, addressID)
+}

@@ -5,6 +5,7 @@ type Account struct {
 	Name           string
 	Email          string
 	Phone          string
+	Role           string
 	Addresses      []SavedAddress
 	PaymentMethods []PaymentMethod
 }

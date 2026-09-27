@@ -2,7 +2,9 @@ package service
 
 import (
 	"context"
+	"errors"
 
+	mediaentity "github.com/ChristianDenniss/go-data-model/media/entity"
 	"github.com/ChristianDenniss/go-data-model/source/entity"
 	"github.com/ChristianDenniss/go-data-model/source/repository"
 )
@@ -12,6 +14,7 @@ type Service struct {
 	menus      repository.MenuRepository
 	categories repository.CategoryRepository
 	items      repository.ItemRepository
+	browse     repository.BrowseRepository
 }
 
 func New(
@@ -19,12 +22,14 @@ func New(
 	menus repository.MenuRepository,
 	categories repository.CategoryRepository,
 	items repository.ItemRepository,
+	browse repository.BrowseRepository,
 ) *Service {
 	return &Service{
 		stores:     stores,
 		menus:      menus,
 		categories: categories,
 		items:      items,
+		browse:     browse,
 	}
 }
 
@@ -53,6 +58,11 @@ func (s *Service) RecordItem(ctx context.Context, item entity.Item) error {
 	if item.ID == "" {
 		return entity.ErrIDRequired
 	}
+	imageURL, err := mediaentity.NormalizeImageURL(item.ImageURL)
+	if err != nil {
+		return err
+	}
+	item.ImageURL = imageURL
 	return s.items.Upsert(ctx, item)
 }
 
@@ -63,9 +73,30 @@ func (s *Service) GetStore(ctx context.Context, id string) (entity.Store, error)
 	return s.stores.GetByID(ctx, id)
 }
 
+func (s *Service) ListStoresByChannel(ctx context.Context, channelID string) ([]entity.Store, error) {
+	if channelID == "" {
+		return nil, entity.ErrIDRequired
+	}
+	return s.stores.ListByChannel(ctx, channelID)
+}
+
 func (s *Service) GetItem(ctx context.Context, id string) (entity.Item, error) {
 	if id == "" {
 		return entity.Item{}, entity.ErrIDRequired
 	}
 	return s.items.GetByID(ctx, id)
+}
+
+func (s *Service) LoadMenuBrowse(ctx context.Context, sourceStoreID, fulfillmentMode, deliveryExecutor string) (entity.MenuBrowse, error) {
+	if sourceStoreID == "" || fulfillmentMode == "" {
+		return entity.MenuBrowse{}, entity.ErrIDRequired
+	}
+	out, err := s.browse.LoadMenuBrowse(ctx, sourceStoreID, fulfillmentMode, deliveryExecutor)
+	if err != nil {
+		if errors.Is(err, entity.ErrNotFound) {
+			return entity.MenuBrowse{}, entity.ErrNotFound
+		}
+		return entity.MenuBrowse{}, err
+	}
+	return out, nil
 }

@@ -12,6 +12,12 @@ type ServiceArea struct {
 	Geometry         string
 }
 
+type RestaurantStorePath struct {
+	RestaurantID  string
+	ProviderID    string
+	SourceStoreID string
+}
+
 type HoursRegular struct {
 	ID            string
 	SourceStoreID string

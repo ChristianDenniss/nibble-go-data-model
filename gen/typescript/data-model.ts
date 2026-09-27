@@ -36,6 +36,37 @@ export interface Channel {
   name: string
 }
 
+export interface Market {
+  id: string
+  slug: string
+  name: string
+  country: string
+  region: string
+  currency: string
+  timezone: string
+  status: string
+  geohashPrefixes: string
+}
+
+export interface ProbeDropoff {
+  id: string
+  marketId: string
+  label: string
+  geohash: string
+  location: Location
+}
+
+export interface ChannelCoverage {
+  id: string
+  channelId: string
+  marketId: string
+  status: string
+  storeCount: number
+  ingestRunId: string
+  note: string
+  lastObservedAt: string | null
+}
+
 export interface Brand {
   id: string
   slug: string
@@ -66,6 +97,22 @@ export interface SourceStore {
   phone: string
 }
 
+export interface SourceMenu {
+  id: string
+  sourceStoreId: string
+  fulfillmentMode: string
+  deliveryExecutor: string
+  externalMenuId: string
+}
+
+export interface SourceCategory {
+  id: string
+  sourceMenuId: string
+  externalCategoryId: string
+  name: string
+  sortOrder: number
+}
+
 export interface SourceItem {
   id: string
   sourceCategoryId: string
@@ -73,6 +120,24 @@ export interface SourceItem {
   name: string
   description: string
   available: boolean
+  imageURL: string
+}
+
+export interface SourceMenuItemView {
+  item: SourceItem
+  priceCents: number
+  currency: string
+}
+
+export interface SourceCategoryWithItems {
+  category: SourceCategory
+  items: SourceMenuItemView[]
+}
+
+export interface SourceMenuBrowse {
+  store: SourceStore
+  menu: SourceMenu
+  categories: SourceCategoryWithItems[]
 }
 
 export interface User {
@@ -98,12 +163,12 @@ export interface CompareBasketLine {
 }
 
 export interface CompareBasket {
-  lines: BasketLine[]
+  lines: CompareBasketLine[]
 }
 
 export interface CompareFulfillmentContext {
   mode: string
-  dropoff: DropoffPoint | null
+  dropoff: CompareDropoffPoint | null
 }
 
 export interface CompareDropoffPoint {
@@ -135,9 +200,9 @@ export interface CompareAPIResponse {
   compareSessionId: string
   observedAt: string
   pathsRanked: number
-  recommendation: APIPathRank | null
-  runnersUp: APIPathRank[]
-  unavailablePaths: APIUnavailablePath[]
+  recommendation: CompareAPIPathRank | null
+  runnersUp: CompareAPIPathRank[]
+  unavailablePaths: CompareAPIUnavailablePath[]
 }
 
 export interface Category {
@@ -153,6 +218,13 @@ export interface Cuisine {
   name: string
 }
 
+export interface RestaurantHours {
+  service: string
+  dayOfWeek: number
+  opens: string
+  closes: string
+}
+
 export interface Restaurant {
   id: string
   name: string
@@ -160,6 +232,9 @@ export interface Restaurant {
   cuisineIds: string[]
   categoryIds: string[]
   rating: Rating
+  phone: string
+  appURL: string
+  hours: RestaurantHours[]
 }
 
 export interface Item {
@@ -168,6 +243,7 @@ export interface Item {
   name: string
   description: string
   section: string
+  imageURL: string
 }
 
 export interface Offer {
@@ -241,5 +317,140 @@ export interface Order {
   status: OrderStatus
   total: Money
   lines: OrderLine[]
+}
+
+export interface Promotion {
+  id: string
+  channelId: string
+  name: string
+  description: string
+  kind: string
+  fulfillmentMode: string
+  value: Money
+  valueBPS: number
+  startsAt: string
+  endsAt: string
+}
+
+export interface PromotionConstraint {
+  id: string
+  promotionId: string
+  minSubtotalCents: number
+  code: string
+  membershipRequired: boolean
+  maxDiscountCents: number
+}
+
+export interface PromotionTarget {
+  id: string
+  promotionId: string
+  placeId: string
+  sourceStoreId: string
+  sourceItemId: string
+  dishId: string
+  brandId: string
+  legacyRestaurantId: string
+}
+
+export interface MembershipProduct {
+  id: string
+  channelId: string
+  name: string
+  slug: string
+}
+
+export interface Advertiser {
+  id: string
+  name: string
+  brandId: string
+  contactEmail: string
+  status: string
+  createdAt: string
+}
+
+export interface SponsoredCampaign {
+  id: string
+  advertiserId: string
+  marketId: string
+  name: string
+  status: string
+  startsAt: string
+  endsAt: string
+  pricingModel: string
+  bidCents: number
+  dailyBudgetCents: number
+  totalBudgetCents: number
+  currency: string
+}
+
+export interface SponsoredPlacement {
+  id: string
+  campaignId: string
+  slot: string
+  priority: number
+  legacyRestaurantId: string
+  placeId: string
+  brandId: string
+  promotionId: string
+  categoryId: string
+  cuisineId: string
+  headline: string
+  body: string
+  imageURL: string
+  callToAction: string
+}
+
+export interface SponsoredEvent {
+  id: string
+  placementId: string
+  kind: string
+  userId: string
+  surface: string
+  occurredAt: string
+}
+
+export interface SponsoredMark {
+  placementId: string
+  campaignId: string
+  advertiserName: string
+  label: string
+}
+
+export interface DealBadge {
+  promotionId: string
+  channelId: string
+  label: string
+  fulfillmentMode: string
+}
+
+export interface HomeBanner {
+  id: string
+  kind: string
+  headline: string
+  body: string
+  imageURL: string
+  callToAction: string
+  restaurantId: string
+  sponsored: SponsoredMark | null
+  deal: DealBadge | null
+}
+
+export interface HomeFeedItem {
+  restaurantId: string
+  reason: string
+  sponsored: SponsoredMark | null
+  deal: DealBadge | null
+}
+
+export interface HomeSection {
+  kind: string
+  title: string
+  items: HomeFeedItem[]
+}
+
+export interface HomeFeed {
+  generatedAt: string
+  banners: HomeBanner[]
+  sections: HomeSection[]
 }
 

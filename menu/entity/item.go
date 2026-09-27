@@ -6,4 +6,5 @@ type Item struct {
 	Name         string
 	Description  string
 	Section      string
+	ImageURL     string
 }
