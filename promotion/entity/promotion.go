@@ -45,6 +45,8 @@ type Target struct {
 	DishID             string
 	BrandID            string
 	LegacyRestaurantID string
+	Region             string
+	Country            string
 }
 
 // ActivePromotion is a live promotion with its targets (no targets = channel-wide).

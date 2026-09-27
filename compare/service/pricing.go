@@ -88,6 +88,7 @@ func (s *Service) pricePath(ctx context.Context, spec pathSpec, req compareentit
 	}
 
 	fees := int64(0)
+	var feeLines []compareentity.FeeLine
 	quoteBullets := []string{}
 	confidence := "medium"
 	dropoffGeohash := quoteGeohash(req)
@@ -107,6 +108,9 @@ func (s *Service) pricePath(ctx context.Context, spec pathSpec, req compareentit
 			confidence = "low"
 		} else {
 			fees = sumQuoteFees(quote)
+			for _, line := range quote.FeeLines {
+				feeLines = append(feeLines, compareentity.FeeLine{Kind: line.Kind, Amount: line.Amount})
+			}
 			quoteBullets = append(quoteBullets, fmt.Sprintf("quote %s (%d fee lines)", quote.ID, len(quote.FeeLines)))
 			if confidence != "low" {
 				confidence = "high"
@@ -128,7 +132,13 @@ func (s *Service) pricePath(ctx context.Context, spec pathSpec, req compareentit
 		DeliveryExecutor: spec.Executor,
 		ChannelID:        opt.ChannelID,
 		RationaleBullets: bullets,
+		ItemSubtotal: subtotalMoney(subtotal, currency),
+		Fees: feeLines,
 	}, compareentity.UnavailablePath{}, true
+}
+
+func subtotalMoney(cents int64, currency string) money.Money {
+	return money.Money{AmountCents: cents, Currency: currency}
 }
 
 func (s *Service) basketSubtotal(ctx context.Context, spec pathSpec, req compareentity.Request) (int64, string, []string, error) {
