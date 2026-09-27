@@ -85,6 +85,493 @@
   "ss_skip_5ef34bf83f44c4ca69672f3a": {
     "canonicalStoreId": "ss_ubereats_0a5ba1d349096949787465cf",
     "evidenceUrl": "https://www.skipthedishes.com/taco-boyz-520",
-    "evidence": "Reviewed Taco Boyz name and 520 Smythe St address on Skip against the existing Fredericton branch. Indexed page retrieved 2026-09-27; source crawl age 2 weeks."
+    "corroboratingSourceUrl": "https://www.doordash.com/en-CA/store/taco-boyz-fredericton-23391251/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Taco Boyz, 520 Smythe St, Fredericton, NB, E3B 1W8, CAN; corresponding provider: Taco Boyz, 520 Smythe St #2a, Fredericton, NB E3B 1W8, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_doordash_27511224": {
+    "canonicalStoreId": "ss_ubereats_041c3ddf79bdba9aec389684",
+    "evidenceUrl": "https://www.doordash.com/en/store/pizza-hut-fredericton-27511224/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/pizza-hut-1180-smythe-street/8TbR2ZlqX_G2VCHXiBCDrQ",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1180 Smythe St, Fredericton, NB E3B 3H5, Canada; Uber Eats: 1180 Smythe Street Fredericton, Nb E3b 3h5 Canada,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1354144": {
+    "canonicalStoreId": "ss_ubereats_d2ec809ae6d4ef87ee449ba5",
+    "evidenceUrl": "https://www.doordash.com/store/boston-pizza-fredericton-1354144/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/boston-pizza-1230-prospect-st/mblmVJwXXAef1mFPvKrZPw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1230 Prospect St, Fredericton, NB E3B 3C1, Canada; Uber Eats: 1230 Prospect Street, Fredericton, NAMER E3B 3C1. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_2369553": {
+    "canonicalStoreId": "ss_ubereats_9c3b54ffe8d017b16f9d1903",
+    "evidenceUrl": "https://www.doordash.com/store/barburrito-fredericton-2369553/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/barburrito-1111-regent-st/atKbs3jCVIyj4wvPVu0QJw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1111 Regent St, Fredericton NB E3B 3Z2, Canada; Uber Eats: 1111 Regent St, Unit 10, Fredericton, NAMER E3B 3Z2. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1067206": {
+    "canonicalStoreId": "ss_ubereats_4aa948d1a711c77953745320",
+    "evidenceUrl": "https://www.doordash.com/store/east-side-marios-fredericton-1067206/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/east-side-marios-14-trinity-avenue/8EW3oWzhV2-oPxLEb6nhqg",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 14 Trinity Ave, Fredericton NB E3C 0B8, Canada; Uber Eats: 14 Trinity Avenue Fredericton, Nb E3c 0b8 Canada,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1260721": {
+    "canonicalStoreId": "ss_ubereats_42c2be393e6797c331f7dab4",
+    "evidenceUrl": "https://www.doordash.com/store/byblos-restaurant-and-bar-fredericton-1260721/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/byblos-restaurant-and-bar/k67T4frVWmW6lMzuHiWqgQ",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Byblos Restaurant & Bar, 215 Queen St, Fredericton, NB E3B 0Y2, Canada; Uber Eats: 215 Queen Street , Fredericton, NB E3b0y4. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_33319203": {
+    "canonicalStoreId": "ss_ubereats_0ac0e32bab971933f3570770",
+    "evidenceUrl": "https://www.doordash.com/store/the-hilltop-maritime-tavern-fredericton-33319203/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/the-hilltop-maritime-tavern-prospect-st/8dRkybEXVa6Ah1275-RMbg",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1034 Prospect St, Fredericton NB E3B 3C1, Canada; Uber Eats: 1034 Prospect St E, Fredericton, NB E3B 3C1. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_24459162": {
+    "canonicalStoreId": "ss_ubereats_b95c97726012c3b06035ab43",
+    "evidenceUrl": "https://www.doordash.com/store/dairy-queen-fredericton-24459162/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/dairy-queen-1250-prospect-st/EnVZf0dqXcm4nUXacg_UGQ",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1250 Prospect St, Fredericton, NB E3B 3C1, Canada; Uber Eats: 1250 Prospect St Fredericton, Nb E3b 3c1 Canada,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_25038341": {
+    "canonicalStoreId": "ss_ubereats_d13aaf73cb7eff8bc90becf7",
+    "evidenceUrl": "https://www.doordash.com/store/mary-browns-chicken-fredericton-25038341/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/mary-browns-1111-regent-street-unit-17/_3Pdhf48VYmOO-Qj4viBog",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1111 Regent St, Fredericton, NB E3B 3Z2, Canada; Uber Eats: 1111 Regent Street, Unit 17, FREDERICTON, NAMER E3B 3Z2. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_36333145": {
+    "canonicalStoreId": "ss_ubereats_a6fa58a0f5407740496227a2",
+    "evidenceUrl": "https://www.doordash.com/store/firehouse-subs-fredericton-36333145/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/firehouse-subs-102-main-street/_2HQ4xkvXJKDhlvMiPE41Q",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: New Brunswick Society Of Certified Engineering Technicians And Technologists, 102 Main St, Fredericton, NB E3A 9N6, Canada; Uber Eats: 102 Main Street, Fredericton, NAMER E3A 9N6. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1306543": {
+    "canonicalStoreId": "ss_ubereats_f4e63ac345914b3e23d08b75",
+    "evidenceUrl": "https://www.doordash.com/store/papa-johns-pizza-canada-fredericton-1306543/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/papa-johns-pizza-528-smythe-street/y_hllQJrXnGpZxIovrnmfA",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 528 Smythe St, Fredericton, NB E3B 3E6, Canada; Uber Eats: 528 Smythe St, Fredericton, NB E3B 3E6. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_28828775": {
+    "canonicalStoreId": "ss_ubereats_d2ba8843cd12b7bd4c3c5d72",
+    "evidenceUrl": "https://www.doordash.com/store/pizza-pizza-fredericton-28828775/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/pizza-pizza-1111-regent-st-unit-8/OM5Rr_hUXKmfIF-eqfgvvw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1111 Regent St, Fredericton NB E3B 3Z2, Canada; Uber Eats: 1111 Regent Street Fredericton, Nb E3b 3z2,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_23836195": {
+    "canonicalStoreId": "ss_ubereats_9b3e884cdcf95fc2be4b7377",
+    "evidenceUrl": "https://www.doordash.com/store/betty-lees---baking-paradise---tobe-milk-tea-fredericton-23836195/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/betty-lees-baking-paradise-tobe-milk-tea/IJEgW46IV2ii33zeqhyZlw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 608 Queen St, Fredericton, NB E3B 1C2, Canada; Uber Eats: 608 Queen Street Fredericton, Nb E3b 1c2 Canada, NAMER E3B 1C2. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1540160": {
+    "canonicalStoreId": "ss_ubereats_d1e5dc5eff8ac2018dbf023d",
+    "evidenceUrl": "https://www.doordash.com/store/jack%E2%80%99s-pizza-and-donair-fredericton-1540160/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/jacks-pizza-%26-donair/JytsASr7UZWcX74YWRpgdw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Jack's Pizza, 379 King St, Fredericton, NB E3B 1E4, Canada; Uber Eats: 379 King St, Fredericton, NAMER E3B 1E4. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_27672217": {
+    "canonicalStoreId": "ss_ubereats_2259a671ddd4edbf20b29bf8",
+    "evidenceUrl": "https://www.doordash.com/store/a&w-fredericton-27672217/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/a%26w-235-main-st/VaIJOPm3Wm6l9DvO0S7Ufw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 235 Main St, Fredericton, NB E3A 1E1, Canada; Uber Eats: 235 Main Street, Fredericton, NAMER E3A 1E1. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_872884": {
+    "canonicalStoreId": "ss_ubereats_8eeb1fd0d61243a54c720db7",
+    "evidenceUrl": "https://www.doordash.com/store/burger-king-fredericton-872884/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/burger-king-1140-smythe-street/2naUpFbQX3SA9pxNSUy8nw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Burger King, 1140 Smythe St, Fredericton, NB E3B 3H5, Canada; Uber Eats: 1140 Smythe Street, Fredericton, NB E3B 3H5. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_32686227": {
+    "canonicalStoreId": "ss_ubereats_c889dae761d5405354264152",
+    "evidenceUrl": "https://www.doordash.com/store/sweet-jesus-fredericton-32686227/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/sweet-jesus-280-king-street/n5BJgMkMXvuCcZRsjIgQbg",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 280 King St, Fredericton NB E3B 1E2, Canada; Uber Eats: 280 King Street, Fredericton, NAMER E3B 1G8. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1814763": {
+    "canonicalStoreId": "ss_ubereats_e53893e3e795d1d1a68bd633",
+    "evidenceUrl": "https://www.doordash.com/store/greco-pizza-fredericton-1814763/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/greco-pizza-529-dundonald-street/h04wxxBnXR2eyUrJQ-dn0A",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 529 Dundonald St, Fredericton, NB E3B 7J5, Canada; Uber Eats: 529 Dundonald Street, Fredericton, Nb, Ca, E3b 1x5,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_719055": {
+    "canonicalStoreId": "ss_ubereats_5030918dc595b0bf3a4b6ad4",
+    "evidenceUrl": "https://www.doordash.com/store/smokes-poutinerie-fredericton-719055/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/smokes-poutinerie-fredericton/Jk20hRJqXOqrMdbDQu2B-g",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Smoke's Poutinerie, 99 York St, Fredericton, NB E3B 3N4, Canada; Uber Eats: 99 York Street , Fredericton, NB E3B3N4. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_28386205": {
+    "canonicalStoreId": "ss_ubereats_2f917466a32097e55cbe1b33",
+    "evidenceUrl": "https://www.doordash.com/store/sun-prince-restaurant-fredericton-28386205/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/sun-prince-north/HPLBpnrQWbCea2w71dXCaw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 41 Main St, Fredericton NB E3A 1B9, Canada; Uber Eats: 41 Main St, Fredericton, NAMER E3A 1B9. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_35874329": {
+    "canonicalStoreId": "ss_ubereats_dc644f140109cb05c0c042ae",
+    "evidenceUrl": "https://www.doordash.com/store/boustan-fredericton-35874329/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/boustan-20-two-nations-crossing-b/kHejs5lPUY-olEhxjC15_g",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: B - 220 Two Nations Cross, Fredericton NB E3A 0H2, Canada; Uber Eats: 220 Two Nations Crossing B, Fredericton, NAMER E3A 0H2. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1176055": {
+    "canonicalStoreId": "ss_ubereats_11a80babbe99f2731a5d8e7a",
+    "evidenceUrl": "https://www.doordash.com/store/taco-bell-fredericton-1176055/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/taco-bell-regent-mall/vgnF3drfWaC2m5xBBssyRQ",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1381 Regent St, Fredericton, NB E3C 1A2, Canada; Uber Eats: 1381 Regent St, Fredericton, NB E3C. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_740167": {
+    "canonicalStoreId": "ss_ubereats_449d59adade626a04a5150a2",
+    "evidenceUrl": "https://www.doordash.com/store/naru-japanese-restaurant-fredericton-740167/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/naru-japanese-restaurant/PhuhDwbyWAy_BaitEiL57w",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Naru Sushi Japanese Restaurant, 536 Queen St, Fredericton, NB E3B 1B7, Canada; Uber Eats: 536 Queen St, Fredericton, NB E3B 1B9. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_38798997": {
+    "canonicalStoreId": "ss_ubereats_00e6ce0e9969666b47cd8c06",
+    "evidenceUrl": "https://www.doordash.com/store/mantra-restaurant-&-bar-fredericton-38798997/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/mantra-restaurant-%26-bar-232-rookwood-avenue/aNPOiPVLXrCXjKQGaaXUhQ",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 232 Rookwood Ave, Fredericton, NB E3B 2M2, Canada; Uber Eats: 232 Rookwood Avenue, Fredericton, NAMER E3B 1A3. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_24439417": {
+    "canonicalStoreId": "ss_ubereats_581af75a696dee5cc868e276",
+    "evidenceUrl": "https://www.doordash.com/store/mezza-lebanese-kitchen-fredericton-24439417/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/mezza-lebanese-kitchen-fredericton/gO4SM2hJX0KK_Q4hUNcV3Q",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: 1150 Prospect St, Fredericton, NB E3B 3C1, Canada; Uber Eats: 1150 Prospect Street Fredericton, Nb E3b 3c1 Canada,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_doordash_1909535": {
+    "canonicalStoreId": "ss_ubereats_5fe14169d592f80ece4c5b4d",
+    "evidenceUrl": "https://www.doordash.com/store/jungle-jims-fredericton-1909535/",
+    "uberEvidenceUrl": "https://www.ubereats.com/ca/store/jungle-jims-fredericton-nb/7t3SpTjfWTyrlUdUhBmbPw",
+    "evidence": "Reviewed matching restaurant brand and street address in Fredericton. DoorDash: Jungle Jim's, 1168 Smythe St, Fredericton, NB E3B 3H5, Canada; Uber Eats: 1168 Smythe St, Fredericton, Nb, Ca, E3b 3h5,. Source postal formatting may differ; no cross-street or conflicting-unit match."
+  },
+  "ss_skip_b6a566c24a632ff07ed35485": {
+    "canonicalStoreId": "ss_ubereats_e53893e3e795d1d1a68bd633",
+    "evidenceUrl": "https://www.skipthedishes.com/greco-pizza-dundonald-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/greco-pizza-fredericton-1814763/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Greco Pizza, 529 Dundonald St, Fredericton, NB, E3B 7J5, CAN; corresponding provider: Greco Pizza, 529 Dundonald St, Fredericton, NB E3B 7J5, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_4005b56ea3ad12052f648e41": {
+    "canonicalStoreId": "ss_doordash_24809569",
+    "evidenceUrl": "https://www.skipthedishes.com/street-greek-north",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/street-greek-north-fredericton-24809569/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Street Greek North, 580 Two Nations Crossing, Fredericton, NB, E3A 0X9, CAN; corresponding provider: Street Greek North, 580 Two Nations Cross, Fredericton NB E3A 0X9, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_3ef7dc12c4ead3b310873059": {
+    "canonicalStoreId": "ss_ubereats_5d936a739bbd85befa8c3e8b",
+    "evidenceUrl": "https://www.skipthedishes.com/tony-pepperoni-acorn-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/tony-pepperoni-gourmet-pizza-south-side/Fvn7SIM0WOGJ-cUS10nkcQ",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Tony Pepperoni, 5 Acorn St, Fredericton, NB, E3C 2M5, CAN; corresponding provider: Tony Pepperoni Gourmet Pizza (South Side), 5 Acorn Street, 7, Fredericton, NB E3C 2M5. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_5c526f72ab1e8c0f0a2d17d1": {
+    "canonicalStoreId": "ss_ubereats_449d59adade626a04a5150a2",
+    "evidenceUrl": "https://www.skipthedishes.com/naru-japanese-restaurant-queen-st",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/naru-japanese-restaurant-fredericton-740167/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Naru Japanese Restaurant  , 536 Queen St, Fredericton, NB, E3B 1B9, CAN; corresponding provider: Naru Japanese Restaurant, Naru Sushi Japanese Restaurant, 536 Queen St, Fredericton, NB E3B 1B7, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_d3ec7fcf401a16e13a89ee7f": {
+    "canonicalStoreId": "ss_doordash_24875523",
+    "evidenceUrl": "https://www.skipthedishes.com/yassou-souvlaki-and-donair",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/yassou-souvlaki-&-donair-fredericton-24875523/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Yassou Souvlaki & Donair, 1111 Regent St, Fredericton, NB, E3B 3Z2, CAN; corresponding provider: Yassou souvlaki & donair, 1111 Regent St, Fredericton, NB E3B 3Z2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_c15f1dd57c453ba43aeaa02c": {
+    "canonicalStoreId": "ss_ubereats_8862ef2e97935814f1a7eaf7",
+    "evidenceUrl": "https://www.skipthedishes.com/cineplex-regent-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/cineplex-fredericton-31852895/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Cineplex Cinemas, 1381 Regent St, Fredericton, NB, E3C 1A2, CAN; corresponding provider: Cineplex, 1381 Regent St, Fredericton NB E3C 1A2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_7adc7ec18d13a7a08e7bbfb3": {
+    "canonicalStoreId": "ss_ubereats_5639f10835e662c8992745fc",
+    "evidenceUrl": "https://www.skipthedishes.com/dominos-pizza-138-dundonald-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/dominos-pizza-138-dundonald-street/qISmjoMHWFOasWrCGcRjQw",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Domino's Pizza, 138 Dundonald St, Fredericton, NB, E3B 1W8, CAN; corresponding provider: Domino's Pizza (138 Dundonald Street), 138 Dundonald Street, Fredericton, NAMER E3B 1W8. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_47b26f9ee28403804d11c820": {
+    "canonicalStoreId": "ss_ubereats_f49a8d3e91bcbc3831fcc972",
+    "evidenceUrl": "https://www.skipthedishes.com/little-caesars-pizza-prospect-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/little-caesars-1012-prospect-st/nIF0up98Vcmu8_Tn-1k4zg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Little Caesars, 1012 Prospect St, Fredericton, NB, E3B 3C1, CAN; corresponding provider: Little Caesars (1012 Prospect St), 1012 Prospect St E, Fredericton, NB E3B 3C1. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_f545e46de6580e34ed26024c": {
+    "canonicalStoreId": "ss_ubereats_7ff176ad2005deac8b1f91c1",
+    "evidenceUrl": "https://www.skipthedishes.com/luna-pizza-91-york-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/luna-pizza-fredericton-2834176/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Luna Pizza & Pasta, 91 York St, Fredericton, NB, E3B 3N4, CAN; corresponding provider: Luna Pizza, 91 York St, Fredericton, NB E3B 3N4, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_ee4fed881338ca7c278eb29e": {
+    "canonicalStoreId": "ss_ubereats_e280e48570e1c8646d57950c",
+    "evidenceUrl": "https://www.skipthedishes.com/papa-johns-main-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/papa-johns-pizza-269-main-st/PZUx7Y2CUzq6R0CXVOsXAg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Papa John's Pizza, 269 Main St, Fredericton, NB, E3A 1E1, CAN; corresponding provider: Papa John's Pizza (269 Main St), 269 Main St, Fredericton, NB E3A 1E1. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_8da6be25b857e5c72357c331": {
+    "canonicalStoreId": "ss_ubereats_5030918dc595b0bf3a4b6ad4",
+    "evidenceUrl": "https://www.skipthedishes.com/smokes-poutinerie-99-york-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/smokes-poutinerie-fredericton-719055/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Smoke's Poutinerie  , 99 York St, Fredericton, NB, E3B 3N4, CAN; corresponding provider: Smoke's Poutinerie, Smoke's Poutinerie, 99 York St, Fredericton, NB E3B 3N4, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_da420acd3792f8a31e3e561a": {
+    "canonicalStoreId": "ss_ubereats_5a1120fe6c90128085f44b6c",
+    "evidenceUrl": "https://www.skipthedishes.com/thai-manao",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/thai-manao-trinity-ave/SHCZgVfkU1eu0dM32teF5w",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Thai Manao, 10 Trinity Ave, Fredericton, NB, E3C 0B8, CAN; corresponding provider: Thai Manao (Trinity Ave), 10 Trinity Ave, Fredericton, NAMER E3C 0B8. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_024cd5a4c54a137f131d5c08": {
+    "canonicalStoreId": "ss_doordash_925310",
+    "evidenceUrl": "https://www.skipthedishes.com/rocket-burger",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/rocket-burger-fredericton-925310/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Rocket Burger, 349 King St, Fredericton, NB, E3B 1E4, CAN; corresponding provider: Rocket Burger, 349 King St, Fredericton, NB E3B 1E4, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_cd7b1205ace423cd43da207b": {
+    "canonicalStoreId": "ss_ubereats_b6d9219e33a3b627b1f3e3f8",
+    "evidenceUrl": "https://www.skipthedishes.com/saint-louis-bar-and-grill-king-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/st-louis-bar-%26-grill-280-king-street/yQBVrw3yUmuZNTeg0LVo2w",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: St. Louis Bar & Grill, 280 King St, Fredericton, NB, E3B 1G8, CAN; corresponding provider: St. Louis Bar & Grill (280 King Street), 280 King St, Fredericton, NAMER E3B 1E2. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_4e6c2e5c8f937cf9570081a2": {
+    "canonicalStoreId": "ss_ubereats_42c2be393e6797c331f7dab4",
+    "evidenceUrl": "https://www.skipthedishes.com/byblos-restaurant-and-bar",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/byblos-restaurant-and-bar-fredericton-1260721/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Byblos Restaurant & Bar, 215 Queen St, Fredericton, NB, E3B 1A9, CAN; corresponding provider: Byblos Restaurant And Bar, Byblos Restaurant & Bar, 215 Queen St, Fredericton, NB E3B 0Y2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_9476d62b3eb9e3ac0916e0b2": {
+    "canonicalStoreId": "ss_ubereats_bcc2fd0e491c7a5d6d66c667",
+    "evidenceUrl": "https://www.skipthedishes.com/dimitris-king-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/dimitris-souvlaki-restaurant/Xxk9xL4_V2-YSG2Wtq_-Rw",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Dimitri's, 349 King St, Fredericton, NB, E3B 1E4, CAN; corresponding provider: Dimitri's Souvlaki Restaurant, 349 King Street Fredericton, Nb E3b 1e4 Canada,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_ee0dee94533f63d7db09c994": {
+    "canonicalStoreId": "ss_ubereats_d1e5dc5eff8ac2018dbf023d",
+    "evidenceUrl": "https://www.skipthedishes.com/jacks-pizza-donair-king-st",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/jack%E2%80%99s-pizza-and-donair-fredericton-1540160/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Jack's Pizza & Donairs, 379 King St, Fredericton, NB, E3B 1E4, CAN; corresponding provider: Jack\u2019s Pizza and Donair, Jack's Pizza, 379 King St, Fredericton, NB E3B 1E4, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_5b4408fff3f395584bd0f729": {
+    "canonicalStoreId": "ss_ubereats_8eeb1fd0d61243a54c720db7",
+    "evidenceUrl": "https://www.skipthedishes.com/burger-king-smythe-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/burger-king-fredericton-872884/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Burger King, 1140 Smythe St, Fredericton, NB, E3B 3H6, CAN; corresponding provider: Burger King, Burger King, 1140 Smythe St, Fredericton, NB E3B 3H5, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_e9300610bea06b1a5b53937a": {
+    "canonicalStoreId": "ss_ubereats_b516b917b6ed6c6e5c3ba08c",
+    "evidenceUrl": "https://www.skipthedishes.com/mcdonalds-prospect-st-fred",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/mcdonalds-fredericton-1139998/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: McDonald's, 1177 Prospect St, Fredericton, NB, E3B 3B9, CAN; corresponding provider: McDonald's, McDonald's, 1177 Prospect St, Fredericton, NB E3B 3B9, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_b629c3dcd9d3c5ac78cd0415": {
+    "canonicalStoreId": "ss_ubereats_25ea6037985c6fbb0f2798f0",
+    "evidenceUrl": "https://www.skipthedishes.com/saint-hubert-trinity-avenue",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/st-hubert-22-trinity-ave/k0TrPfj_XV6ZCoj7gUKSQw",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: St-Hubert, 22 Trinity Ave, Fredericton, NB, E3C 0B8, CAN; corresponding provider: St-Hubert (22 Trinity Ave), 22 Trinity Ave Fredericton, Nb E3c 0b8 Canada,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_64be2639962a8b5c2ff6bafd": {
+    "canonicalStoreId": "ss_ubereats_11a80babbe99f2731a5d8e7a",
+    "evidenceUrl": "https://www.skipthedishes.com/taco-bell-regent",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/taco-bell-fredericton-1176055/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Taco Bell, 1381 Regent St, Fredericton, NB, E3C 1A2, CAN; corresponding provider: Taco Bell, 1381 Regent St, Fredericton, NB E3C 1A2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_cff1bc98f376c885326a26e3": {
+    "canonicalStoreId": "ss_ubereats_a0cd59dd0bea512201819b48",
+    "evidenceUrl": "https://www.skipthedishes.com/harveys-trinity-avenue",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/harveys-22-trinity-ave/7oumXsOUWDeZa05kA-agyg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Harvey's, 22 Trinity Ave, Fredericton, NB, E3C 0B8, CAN; corresponding provider: Harvey's (22 Trinity Ave), 22 Trinity Ave, Fredericton, NB E3C 0B8. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_bc15fd6b2bf932ac40907fe8": {
+    "canonicalStoreId": "ss_ubereats_d13aaf73cb7eff8bc90becf7",
+    "evidenceUrl": "https://www.skipthedishes.com/mary-browns-chicken-and-taters-regent-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/mary-browns-chicken-fredericton-25038341/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Mary Brown's Chicken, 1111 Regent St, Fredericton, NB, E3B 3Z2, CAN; corresponding provider: Mary Brown's Chicken, 1111 Regent St, Fredericton, NB E3B 3Z2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_873c3d098a3caa9a7581583a": {
+    "canonicalStoreId": "ss_doordash_1084851",
+    "evidenceUrl": "https://www.skipthedishes.com/monks-and-jonesie",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/monks-&-jonesie-fredericton-1084851/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Monks & Jonesie, 130 Bishop Dr, Fredericton, NB, E3C 0E1, CAN; corresponding provider: Monks & Jonesie, 130 Bishop Drive Fredericton, NB E3C 0E1, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_7eda74600fecd92cd6d3516c": {
+    "canonicalStoreId": "ss_ubereats_9c3b54ffe8d017b16f9d1903",
+    "evidenceUrl": "https://www.skipthedishes.com/bar-burrito-regent-st",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/barburrito-fredericton-2369553/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: barBURRITO, 1111 Regent St, Fredericton, NB, E3B 3Z2, CAN; corresponding provider: BarBurrito, 1111 Regent St, Fredericton NB E3B 3Z2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_e6aa275996a38334330fa73a": {
+    "canonicalStoreId": "ss_ubereats_0f197d23bc0c401cbff0eb0f",
+    "evidenceUrl": "https://www.skipthedishes.com/williams-seafood",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/williams-seafood-restaurant/gmt-e7qdWseAUtGMX0aD8A",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Williams Seafood Ltd, 397 Smythe St, Fredericton, NB, E3B 3E3, CAN; corresponding provider: William's Seafood Restaurant, 397 Smythe Street, Fredericton, NAMER E3B 3E3. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_fd7f5886f69c7e6bdca3af08": {
+    "canonicalStoreId": "ss_ubereats_9fe7f7c297b20ac7e345cbbb",
+    "evidenceUrl": "https://www.skipthedishes.com/kfc-regent-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/kfc-canada-1381-regent-street/VHrTrKaJXfK7aHJTQGRr7Q",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: KFC, 1381 Regent St, Fredericton, NB, E3C 1A2, CAN; corresponding provider: KFC Canada (1381 Regent Street), 1381 Regent Street, Fredericton, NAMER E3C 1A2. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_6a0da93ecdbd3d0422a24175": {
+    "canonicalStoreId": "ss_ubereats_d2ec809ae6d4ef87ee449ba5",
+    "evidenceUrl": "https://www.skipthedishes.com/boston-pizza-prospect-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/boston-pizza-fredericton-1354144/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Boston Pizza, 1230 Prospect St, Fredericton, NB, E3B 3C1, CAN; corresponding provider: Boston Pizza, 1230 Prospect St, Fredericton, NB E3B 3C1, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_150651ddd49a40b4bfd9fbfa": {
+    "canonicalStoreId": "ss_ubereats_49846df7683e641f6ac1cc0c",
+    "evidenceUrl": "https://www.skipthedishes.com/mcdonalds-nashwaaksis-fred",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/mcdonalds-nashwaaksis-fred/K31Zx7LPWJixnfDvqf7XhQ",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: McDonald's, 94 Main St, Fredericton, NB, E3A 9N6, CAN; corresponding provider: McDonald's (NASHWAAKSIS-FRED), 94 Main St, Fredericton, NB E3A 9N6. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_8c9cfcd0e4b6e4284d57b78f": {
+    "canonicalStoreId": "ss_ubereats_7c292dea9b2486ee89305e89",
+    "evidenceUrl": "https://www.skipthedishes.com/greco-pizza-102-main-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/greco-pizza102-main-st/sn0S85WLVPyNDVkSAyWoPA",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Greco Pizza, 102 Main St, Fredericton, NB, E3A 9N6, CAN; corresponding provider: Greco Pizza(102 Main St), 102 Main Street, Fredericton, NAMER E3A 9N6. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_de86cdd0f9d03b2d16160068": {
+    "canonicalStoreId": "ss_ubereats_b1ae6f7ac1e9695023a71fb3",
+    "evidenceUrl": "https://www.skipthedishes.com/kfc-283-main-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/kfc-canada-283-main-street/0a0FFEi7Wr2ISYJQFUb31g",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: KFC, 283 Main St, Fredericton, NB, E3A 1E1, CAN; corresponding provider: KFC Canada (283 Main Street), 283 Main St, Fredericton, NB E3A E1E. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_caf55e2d5768115dc7827ab3": {
+    "canonicalStoreId": "ss_ubereats_a424dc8dbb3b364d65a91e62",
+    "evidenceUrl": "https://www.skipthedishes.com/the-squeeze-81",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/the-squeeze-salad-and-smoothie-bar/cooYJjSuUiC5K2_8VPdy_w",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: The Squeeze , 81 Regent St, Fredericton, NB, E3B 3W4, CAN; corresponding provider: The Squeeze - Salad and Smoothie Bar, 81 Regent St, Fredericton, NB E3B 3W3. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_4c1b80cbb49a89a58ab91f4e": {
+    "canonicalStoreId": "ss_ubereats_426e7c66886367622135ec09",
+    "evidenceUrl": "https://www.skipthedishes.com/chatime-fredericton-regent",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/chatime-1381-regent-st/h5zpjHyPXzaTbQGuhnkBvg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Chatime Fredericton, 1381 Regent St, Fredericton, NB, E3C 1A2, CAN; corresponding provider: Chatime (1381 Regent St), 1381 Regent St, Fredericton, NB E3C 1A2. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_beb14949d179c81ca8391284": {
+    "canonicalStoreId": "ss_ubereats_f4e63ac345914b3e23d08b75",
+    "evidenceUrl": "https://www.skipthedishes.com/papa-johns-pizza-528-smythe-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/papa-johns-pizza-canada-fredericton-1306543/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Papa John's Pizza, 528 Smythe St, Fredericton, NB, E3B 3E6, CAN; corresponding provider: Papa Johns Pizza Canada, 528 Smythe St, Fredericton, NB E3B 3E6, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_1f1ab93ca1a696cc4de00cab": {
+    "canonicalStoreId": "ss_ubereats_408289eef50ef1370e9ec5ad",
+    "evidenceUrl": "https://www.skipthedishes.com/the-shake-shed-freddy-main-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/the-shake-shed-freddy/cfQb2KM2Xm22ENLMMNbVwA",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: The Shake Shed Freddy, 230 Main St, Fredericton, NB, E3A 1C9, CAN; corresponding provider: The Shake Shed Freddy, 230 Main St Fredericton, Nb E3a 1c9,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_da277609c6e88eb6e0fcc72c": {
+    "canonicalStoreId": "ss_ubereats_aa3a43536b417e783040bf8e",
+    "evidenceUrl": "https://www.skipthedishes.com/sakura-sushi-298-queen-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/sakura-sushi/YCuJI3fBX3KdEXrpRBGylA",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Sakura Sushi, 343 Queen St #102, Fredericton, NB, E3B 1B1, CAN; corresponding provider: Sakura Sushi, 343 Queen St, 102 Fredericton, Nb E3b 5e7,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_ee17fd8b1a18f5612049e230": {
+    "canonicalStoreId": "ss_ubereats_500e1bd163e51d1460f3f344",
+    "evidenceUrl": "https://www.skipthedishes.com/lotus-cafe-and-restaurant-1010",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/lotus-cafe-%26-restaurant/OFQt9Y_XUHiTn8n8V5Fu0Q",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Lotus Cafe and Restaurant, 1010 Hanwell Rd, Fredericton, NB, E3B 6A4, CAN; corresponding provider: Lotus Cafe & Restaurant, 1010 Hanwell Road, Fredericton, NB E3B 6A4. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_9b1673d0a50b93cd240650f7": {
+    "canonicalStoreId": "ss_ubereats_ad07d810d51677a95230e1c7",
+    "evidenceUrl": "https://www.skipthedishes.com/saffron-indian-foods-main-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/saffron-indian-foods/G2GC-MecVtC4R7dcrtiSLA",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Saffron Indian Foods, 161 Main St, Fredericton, NB, E3A 1C6, CAN; corresponding provider: Saffron Indian Foods, 161 Main St, Fredericton, NB E3A. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_8c1a5343c47fed97a15012fa": {
+    "canonicalStoreId": "ss_ubereats_c889dae761d5405354264152",
+    "evidenceUrl": "https://www.skipthedishes.com/sweet-jesus-280-king-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/sweet-jesus-fredericton-32686227/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Sweet Jesus, 280 King St, Fredericton, NB, E3B 1G8, CAN; corresponding provider: Sweet Jesus, 280 King St, Fredericton NB E3B 1E2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_89c145c3d7d4e993331ece97": {
+    "canonicalStoreId": "ss_ubereats_ddb0b8fe4b12a5616d8dafba",
+    "evidenceUrl": "https://www.skipthedishes.com/viscount-kitchen-pinoy-fiesta-king-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/viscount-kitchen-pinoy-fiesta/9qL59p5yWe6IsM2YMZow0g",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Viscount Kitchen Pinoy Fiesta , 435 King St, Fredericton, NB, E3B 1E5, CAN; corresponding provider: Viscount Kitchen Pinoy Fiesta, 435 King St, 100, Fredericton, NB E3B1E5. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_5aff0799bcd71cef6f03dc74": {
+    "canonicalStoreId": "ss_ubereats_2259a671ddd4edbf20b29bf8",
+    "evidenceUrl": "https://www.skipthedishes.com/a-and-w-235-main-street-fredericton",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/a&w-fredericton-27672217/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: A&W  , 235 Main St, Fredericton, NB, E3A 1E1, CAN; corresponding provider: A&W, 235 Main St, Fredericton, NB E3A 1E1, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_a57401e6b046c6b073c6804a": {
+    "canonicalStoreId": "ss_ubereats_e61f77a348c6497848d3cd83",
+    "evidenceUrl": "https://www.skipthedishes.com/harveys-460-regent-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/harveys-fredericton-1065452/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Harvey's, 460 Regent St, Fredericton, NB, E3B 3X8, CAN; corresponding provider: Harvey's, 460 Regent St, Fredericton, NB E3B 3X8, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_ba00e9edb27b337148439e2b": {
+    "canonicalStoreId": "ss_ubereats_217d1d84633113b536d2d1b4",
+    "evidenceUrl": "https://www.skipthedishes.com/tony-pepperoni-brookside",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/tony-pepperoni-gourmet-pizza-north-side/myu_NUlbUu6F0OJXkNjSfQ",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Tony Pepperoni - Gourmet Pizza, 510 Brookside Dr, Fredericton, NB, E3A 8V2, CAN; corresponding provider: Tony Pepperoni Gourmet Pizza (North Side), 510 Brookside Drive, Fredericton, NAMER E3A 8V2. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_bdd8c012cbb79eee76e764b4": {
+    "canonicalStoreId": "ss_ubereats_1ceaf79c69a8d3739de7ce28",
+    "evidenceUrl": "https://www.skipthedishes.com/moseys-southern-bbq-prospect-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/moseys-southern-bbq-1230-prospect-street/DATudXGoViiFvR33OmNAMw",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Mosey's Southern BBQ, 1230 Prospect St, Fredericton, NB, E3B 3C1, CAN; corresponding provider: Mosey's Southern BBQ (1230 Prospect Street), 1230 Prospect Street, Fredericton, NAMER E3B 3C1. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_832be1ac5b550d5573e57463": {
+    "canonicalStoreId": "ss_ubereats_5066eb64b6473b681110ff9b",
+    "evidenceUrl": "https://www.skipthedishes.com/wingstreet-only-at-pizza-hut-smythe-st",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/wingstreet-by-pizza-hut-fredericton-28425386/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: WingStreet only at Pizza Hut, 1180 Smythe St, Fredericton, NB, E3B 3H5, CAN; corresponding provider: WingStreet by Pizza Hut, 1180 Smythe St, Fredericton, NB E3B 3H5, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_c2f9f5d6f2dae36fd42e0fe4": {
+    "canonicalStoreId": "ss_ubereats_041c3ddf79bdba9aec389684",
+    "evidenceUrl": "https://www.skipthedishes.com/pizza-hut-1180-smythe",
+    "corroboratingSourceUrl": "https://www.doordash.com/en/store/pizza-hut-fredericton-27511224/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Pizza Hut, 1180 Smythe St, Fredericton, NB, E3B 3H5, CAN; corresponding provider: Pizza Hut, 1180 Smythe St, Fredericton, NB E3B 3H5, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_547e20a0de643990a4b7ca71": {
+    "canonicalStoreId": "ss_ubereats_421bddc5761be6fd6895cfde",
+    "evidenceUrl": "https://www.skipthedishes.com/deluxe-french-fries-prospect-street",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/deluxe-french-fries-fredericton/T96W-EQNV5WFOVyfsvGEvg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Deluxe French Fries, 964 Prospect St, Fredericton, NB, E3B 2T8, CAN; corresponding provider: Deluxe French Fries [Fredericton], 964 Prospect St Fredericton, Nb E3b 2t8 Canada,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_e3c1d5d668cf80760f61468c": {
+    "canonicalStoreId": "ss_ubereats_bc8238a5d7db467ed41c2b0d",
+    "evidenceUrl": "https://www.skipthedishes.com/osmows-smythe-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/osmows-shawarma-fredericton-32003605/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Osmow's Shawarma, 1180 Smythe St, Fredericton, NB, E3B 3H5, CAN; corresponding provider: Osmow's Shawarma, 1180 Smythe St, Fredericton, NB E3B 3H5, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_7df86465954225d13345c227": {
+    "canonicalStoreId": "ss_ubereats_c06d23dc00a1aad196224fff",
+    "evidenceUrl": "https://www.skipthedishes.com/beirut-express-regent-st",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/beirut-express-1381-regent-street/cascotmSW2O3G8yZuCq0hg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Beirut Express, 1381 Regent St, Fredericton, NB, E3C 1A2, CAN; corresponding provider: Beirut Express (1381 Regent Street), 1381 Regent Street, Fredericton, NAMER E3C 1A2. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_6cacc1899db8bd6c79853cc0": {
+    "canonicalStoreId": "ss_ubereats_65f2e4acfb53a9a306a095c3",
+    "evidenceUrl": "https://www.skipthedishes.com/the-tandoori-adda-regent",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/the-tandoori-adda/m_ebHpoVXfSsKoDxmzESXg",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: The Tandoori Adda, 74 Regent St, Fredericton, NB, E3B 3W4, CAN; corresponding provider: The Tandoori Adda, 74 Regent Street Fredericton, Nb E3b 3w4 Canada,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_e4659dabe8e791dab32c9a7d": {
+    "canonicalStoreId": "ss_ubereats_737c03c41ba400702e11f2f6",
+    "evidenceUrl": "https://www.skipthedishes.com/the-midsea-regent",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/the-midsea/Bcy6Sm_VWLCdjR-nXRG-Ng",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: The Midsea, 99 Regent St, Fredericton, NB, E3B 3W3, CAN; corresponding provider: The Midsea, 99 Regent St,, Fredericton, NAMER E3B 3W3. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_854c60aeb8df96c0db9ad001": {
+    "canonicalStoreId": "ss_doordash_30359691",
+    "evidenceUrl": "https://www.skipthedishes.com/pizza-salvatore-277-main-street",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/pizza-salvator%C3%A9-fredericton-30359691/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Pizza Salvator\u00e9, 277 Main St, Fredericton, NB, E3A 1E1, CAN; corresponding provider: Pizza Salvator\u00e9, 277 Main St, Fredericton NB E3A 1E1, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_a1ae73d60cdf1267ca6fb021": {
+    "canonicalStoreId": "ss_ubereats_d2ba8843cd12b7bd4c3c5d72",
+    "evidenceUrl": "https://www.skipthedishes.com/pizza-pizza-1111",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/pizza-pizza-fredericton-28828775/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Pizza Pizza, 1111 Regent St #8, Fredericton, NB, E3B 3Z2, CAN; corresponding provider: Pizza Pizza, 1111 Regent St, Fredericton NB E3B 3Z2, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_87906be34694f1734543646f": {
+    "canonicalStoreId": "ss_ubereats_c183a2c01cd7537d47425d86",
+    "evidenceUrl": "https://www.skipthedishes.com/pizza-pizza-fredericton",
+    "corroboratingSourceUrl": "https://www.ubereats.com/ca/store/pizza-pizza-127-main-st/UwYIcR5YU9eN808BnsxHdw",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Pizza Pizza , 127 Main St, Fredericton, NB, E3A 1C6, CAN; corresponding provider: Pizza Pizza (127 Main St), 127 Main Street Fredericton, Nb E3a 1c6 Canada,. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_6aa88e4a50258f87f5907b5f": {
+    "canonicalStoreId": "ss_doordash_32775541",
+    "evidenceUrl": "https://www.skipthedishes.com/philthy-phillys-trinity-ave",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/philthy-phillys-fredericton-32775541/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: Philthy Phillys, 10 Trinity Ave, Fredericton, NB, E3C 0B8, CAN; corresponding provider: Philthy Philly's, 10 Trinity Ave g208, Fredericton, NB E3C 0B8, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
+  },
+  "ss_skip_315d69139b0de5b540758ca1": {
+    "canonicalStoreId": "ss_ubereats_dd4a46e4b7651804eee5e2ba",
+    "evidenceUrl": "https://www.skipthedishes.com/kfc-prospect-st",
+    "corroboratingSourceUrl": "https://www.doordash.com/store/kfc-fredericton-1089202/",
+    "evidence": "Reviewed matching brand and street address in Fredericton. Skip: KFC, 1165 Prospect St, Fredericton, NB, E3B 3B9, CAN; corresponding provider: KFC, 1165 Prospect St, Fredericton, NB E3B 3B9, Canada. Postal discrepancies do not replace street/unit checks; distinct branches stay separate."
   }
 }

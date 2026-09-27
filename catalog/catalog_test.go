@@ -96,3 +96,50 @@ func TestSkipJoinsOnlyReviewedBranch(t *testing.T) {
 		t.Fatal("Skip branch not merged")
 	}
 }
+
+func TestExpandedMcDonaldsBranchesRemainSeparate(t *testing.T) {
+	prospect := "ss_ubereats_b516b917b6ed6c6e5c3ba08c"
+	main := "ss_ubereats_49846df7683e641f6ac1cc0c"
+	item := func(n int64) []MenuItem { return []MenuItem{{Name: "Big Mac", Amount: price(n), Currency: "CAD"}} }
+	b := Bundle{Version: 1, Providers: map[string]Snapshot{
+		"Uber Eats":     {Stores: []Store{{ID: prospect, Name: "McDonald's Prospect", Items: item(839)}, {ID: main, Name: "McDonald's Main", Items: item(900)}}},
+		"DoorDash":      {Stores: []Store{{ID: "ss_doordash_1139998", Name: "McDonald's", Items: item(859)}}},
+		"SkipTheDishes": {Stores: []Store{{ID: "ss_skip_e9300610bea06b1a5b53937a", Name: "McDonald's", Items: item(879)}, {ID: "ss_skip_150651ddd49a40b4bfd9fbfa", Name: "McDonald's", Items: item(920)}}},
+	}}
+	got := Build(b)
+	if len(got.Restaurants) != 2 {
+		t.Fatalf("expected two distinct branches, got %d", len(got.Restaurants))
+	}
+	for _, restaurant := range got.Restaurants {
+		want := 2
+		if restaurant.ID == "catalog-"+prospect {
+			want = 3
+		}
+		if len(restaurant.Items) != 1 || len(restaurant.Items[0].Offers) != want {
+			t.Fatalf("wrong provider association for %s", restaurant.ID)
+		}
+	}
+}
+
+func TestReviewedMappingsHaveEvidenceAndNoAliasChains(t *testing.T) {
+	var mappings map[string]struct {
+		Canonical   string `json:"canonicalStoreId"`
+		EvidenceURL string `json:"evidenceUrl"`
+		Evidence    string `json:"evidence"`
+	}
+	raw, _ := rules.ReadFile("branch_matches.json")
+	if err := json.Unmarshal(raw, &mappings); err != nil {
+		t.Fatal(err)
+	}
+	for source, mapping := range mappings {
+		if mapping.Canonical == source || mapping.EvidenceURL == "" || mapping.Evidence == "" {
+			t.Fatalf("invalid reviewed mapping: %s", source)
+		}
+		if _, chain := mappings[mapping.Canonical]; chain {
+			t.Fatalf("alias chain must resolve to a root: %s", source)
+		}
+	}
+	if _, merged := mappings["ss_doordash_2518559"]; merged {
+		t.Fatal("Subway conflicting unit addresses must not be merged")
+	}
+}
