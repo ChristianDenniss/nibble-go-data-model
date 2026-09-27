@@ -120,6 +120,7 @@ export interface SourceItem {
   name: string
   description: string
   available: boolean
+  imageURL: string
 }
 
 export interface SourceMenuItemView {
@@ -217,6 +218,13 @@ export interface Cuisine {
   name: string
 }
 
+export interface RestaurantHours {
+  service: string
+  dayOfWeek: number
+  opens: string
+  closes: string
+}
+
 export interface Restaurant {
   id: string
   name: string
@@ -224,6 +232,9 @@ export interface Restaurant {
   cuisineIds: string[]
   categoryIds: string[]
   rating: Rating
+  phone: string
+  appURL: string
+  hours: RestaurantHours[]
 }
 
 export interface Item {
@@ -232,6 +243,7 @@ export interface Item {
   name: string
   description: string
   section: string
+  imageURL: string
 }
 
 export interface Offer {
@@ -305,5 +317,140 @@ export interface Order {
   status: OrderStatus
   total: Money
   lines: OrderLine[]
+}
+
+export interface Promotion {
+  id: string
+  channelId: string
+  name: string
+  description: string
+  kind: string
+  fulfillmentMode: string
+  value: Money
+  valueBPS: number
+  startsAt: string
+  endsAt: string
+}
+
+export interface PromotionConstraint {
+  id: string
+  promotionId: string
+  minSubtotalCents: number
+  code: string
+  membershipRequired: boolean
+  maxDiscountCents: number
+}
+
+export interface PromotionTarget {
+  id: string
+  promotionId: string
+  placeId: string
+  sourceStoreId: string
+  sourceItemId: string
+  dishId: string
+  brandId: string
+  legacyRestaurantId: string
+}
+
+export interface MembershipProduct {
+  id: string
+  channelId: string
+  name: string
+  slug: string
+}
+
+export interface Advertiser {
+  id: string
+  name: string
+  brandId: string
+  contactEmail: string
+  status: string
+  createdAt: string
+}
+
+export interface SponsoredCampaign {
+  id: string
+  advertiserId: string
+  marketId: string
+  name: string
+  status: string
+  startsAt: string
+  endsAt: string
+  pricingModel: string
+  bidCents: number
+  dailyBudgetCents: number
+  totalBudgetCents: number
+  currency: string
+}
+
+export interface SponsoredPlacement {
+  id: string
+  campaignId: string
+  slot: string
+  priority: number
+  legacyRestaurantId: string
+  placeId: string
+  brandId: string
+  promotionId: string
+  categoryId: string
+  cuisineId: string
+  headline: string
+  body: string
+  imageURL: string
+  callToAction: string
+}
+
+export interface SponsoredEvent {
+  id: string
+  placementId: string
+  kind: string
+  userId: string
+  surface: string
+  occurredAt: string
+}
+
+export interface SponsoredMark {
+  placementId: string
+  campaignId: string
+  advertiserName: string
+  label: string
+}
+
+export interface DealBadge {
+  promotionId: string
+  channelId: string
+  label: string
+  fulfillmentMode: string
+}
+
+export interface HomeBanner {
+  id: string
+  kind: string
+  headline: string
+  body: string
+  imageURL: string
+  callToAction: string
+  restaurantId: string
+  sponsored: SponsoredMark | null
+  deal: DealBadge | null
+}
+
+export interface HomeFeedItem {
+  restaurantId: string
+  reason: string
+  sponsored: SponsoredMark | null
+  deal: DealBadge | null
+}
+
+export interface HomeSection {
+  kind: string
+  title: string
+  items: HomeFeedItem[]
+}
+
+export interface HomeFeed {
+  generatedAt: string
+  banners: HomeBanner[]
+  sections: HomeSection[]
 }
 

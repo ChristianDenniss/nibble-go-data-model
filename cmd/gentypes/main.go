@@ -1,4 +1,4 @@
-﻿// Generates TypeScript interfaces from go-data-model entities.
+// Generates TypeScript interfaces from go-data-model entities.
 // Run from the module root: go run ./cmd/gentypes
 package main
 
@@ -14,23 +14,26 @@ import (
 	account "github.com/ChristianDenniss/go-data-model/account/entity"
 	brand "github.com/ChristianDenniss/go-data-model/brand/entity"
 	cart "github.com/ChristianDenniss/go-data-model/cart/entity"
+	category "github.com/ChristianDenniss/go-data-model/category/entity"
 	channel "github.com/ChristianDenniss/go-data-model/channel/entity"
 	compare "github.com/ChristianDenniss/go-data-model/compare/entity"
-	market "github.com/ChristianDenniss/go-data-model/market/entity"
-	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
-	place "github.com/ChristianDenniss/go-data-model/place/entity"
-	source "github.com/ChristianDenniss/go-data-model/source/entity"
-	user "github.com/ChristianDenniss/go-data-model/user/entity"
-	category "github.com/ChristianDenniss/go-data-model/category/entity"
 	cuisine "github.com/ChristianDenniss/go-data-model/cuisine/entity"
+	dish "github.com/ChristianDenniss/go-data-model/dish/entity"
+	home "github.com/ChristianDenniss/go-data-model/home/entity"
 	location "github.com/ChristianDenniss/go-data-model/location/entity"
+	market "github.com/ChristianDenniss/go-data-model/market/entity"
 	menu "github.com/ChristianDenniss/go-data-model/menu/entity"
+	merchandising "github.com/ChristianDenniss/go-data-model/merchandising/entity"
 	money "github.com/ChristianDenniss/go-data-model/money/entity"
 	observation "github.com/ChristianDenniss/go-data-model/observation/entity"
 	offer "github.com/ChristianDenniss/go-data-model/offer/entity"
 	order "github.com/ChristianDenniss/go-data-model/order/entity"
+	place "github.com/ChristianDenniss/go-data-model/place/entity"
+	promotion "github.com/ChristianDenniss/go-data-model/promotion/entity"
 	provider "github.com/ChristianDenniss/go-data-model/provider/entity"
 	restaurant "github.com/ChristianDenniss/go-data-model/restaurant/entity"
+	source "github.com/ChristianDenniss/go-data-model/source/entity"
+	user "github.com/ChristianDenniss/go-data-model/user/entity"
 )
 
 type named struct {
@@ -71,6 +74,7 @@ func main() {
 		{name: "CompareAPIResponse", v: compare.APICompareResponse{}},
 		{name: "Category", v: category.Category{}},
 		{name: "Cuisine", v: cuisine.Cuisine{}},
+		{name: "RestaurantHours", v: restaurant.Hours{}},
 		{name: "Restaurant", v: restaurant.Restaurant{}},
 		{name: "Item", v: menu.Item{}},
 		{name: "Offer", v: offer.Offer{}},
@@ -82,6 +86,20 @@ func main() {
 		{name: "Cart", v: cart.Cart{}},
 		{name: "OrderLine", v: order.OrderLine{}},
 		{name: "Order", v: order.Order{}},
+		{name: "Promotion", v: promotion.Promotion{}},
+		{name: "PromotionConstraint", v: promotion.Constraint{}},
+		{name: "PromotionTarget", v: promotion.Target{}},
+		{name: "MembershipProduct", v: promotion.MembershipProduct{}},
+		{name: "Advertiser", v: merchandising.Advertiser{}},
+		{name: "SponsoredCampaign", v: merchandising.Campaign{}},
+		{name: "SponsoredPlacement", v: merchandising.Placement{}},
+		{name: "SponsoredEvent", v: merchandising.Event{}},
+		{name: "SponsoredMark", v: home.SponsoredMark{}},
+		{name: "DealBadge", v: home.DealBadge{}},
+		{name: "HomeBanner", v: home.Banner{}},
+		{name: "HomeFeedItem", v: home.FeedItem{}},
+		{name: "HomeSection", v: home.Section{}},
+		{name: "HomeFeed", v: home.Feed{}},
 	}
 
 	for _, item := range typesToEmit {

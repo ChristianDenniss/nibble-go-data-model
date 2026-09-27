@@ -28,12 +28,13 @@ type Category struct {
 }
 
 type Item struct {
-	ID             string
+	ID               string
 	SourceCategoryID string
-	ExternalItemID string
-	Name           string
-	Description    string
-	Available      bool
+	ExternalItemID   string
+	Name             string
+	Description      string
+	Available        bool
+	ImageURL         string
 }
 
 type ModifierGroup struct {

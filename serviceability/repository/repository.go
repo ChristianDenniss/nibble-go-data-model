@@ -15,3 +15,8 @@ type ServiceAreaRepository interface {
 	ListForPath(ctx context.Context, sourceStoreID, fulfillmentMode, deliveryExecutor string) ([]entity.ServiceArea, error)
 	Upsert(ctx context.Context, area entity.ServiceArea) error
 }
+
+type RestaurantStorePathRepository interface {
+	ListByRestaurants(ctx context.Context, restaurantIDs []string) ([]entity.RestaurantStorePath, error)
+	Upsert(ctx context.Context, path entity.RestaurantStorePath) error
+}

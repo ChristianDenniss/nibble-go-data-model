@@ -15,7 +15,7 @@ restaurant/
 
 Contexts (legacy, still wired for ingest v1): `restaurant`, `menu`, `offer`, `observation`, `provider`, `category`, `cuisine`, `account`, `cart`, `order`.
 
-Target contexts: `channel`, `ingest`, `source`, `brand`, `place`, `dish`, `resolution`, `itemprice`, `quoteobs`, `promotion`, `serviceability`, `user`, `compare`.
+Target contexts: `channel`, `ingest`, `source`, `brand`, `place`, `dish`, `resolution`, `itemprice`, `quoteobs`, `promotion`, `market`, `serviceability`, `user`, `compare`, `merchandising` (sponsored placements), `home` (home feed read model).
 
 Read models: `storefront` (legacy catalog bundle for the web browse experience).
 

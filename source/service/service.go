@@ -4,6 +4,7 @@ import (
 	"context"
 	"errors"
 
+	mediaentity "github.com/ChristianDenniss/go-data-model/media/entity"
 	"github.com/ChristianDenniss/go-data-model/source/entity"
 	"github.com/ChristianDenniss/go-data-model/source/repository"
 )
@@ -57,6 +58,11 @@ func (s *Service) RecordItem(ctx context.Context, item entity.Item) error {
 	if item.ID == "" {
 		return entity.ErrIDRequired
 	}
+	imageURL, err := mediaentity.NormalizeImageURL(item.ImageURL)
+	if err != nil {
+		return err
+	}
+	item.ImageURL = imageURL
 	return s.items.Upsert(ctx, item)
 }
 
