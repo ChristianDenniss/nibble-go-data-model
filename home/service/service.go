@@ -13,7 +13,8 @@ import (
 
 const (
 	railLimit   = 10
-	bannerLimit = 5
+	// Keep the sponsored placements and five organic deal banners visible.
+	bannerLimit = 8
 )
 
 type CatalogLoader interface {

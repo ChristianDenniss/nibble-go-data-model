@@ -10,6 +10,7 @@ const (
 	KindPercentOff   = "percent_off"
 	KindAmountOff    = "amount_off"
 	KindFreeDelivery = "free_delivery"
+	KindFixedPrice   = "fixed_price"
 )
 
 // Promotion is a public deal a channel runs. Empty FulfillmentMode means every mode on that channel.
