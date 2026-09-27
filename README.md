@@ -25,3 +25,11 @@ Services should pin **`v1.1.0` or later**. Tag `v1.0.0` is the pre-split scaffol
 and does not contain these packages.
 
 Storage adapters (see `nibble-go-data-store`) implement the repository interfaces. Transports (see `nibble-api-engine`) call the services.
+
+## Provider catalog
+
+`catalog` validates acquisition bundles and builds the public restaurant/menu
+projection. `catalog/branch_matches.json` contains reviewed branch evidence;
+item normalization removes only cosmetic trademark/calorie/whitespace changes,
+retaining size, quantity and meal wording. Missing provider prices remain null.
+The public types deliberately omit collection provenance.
