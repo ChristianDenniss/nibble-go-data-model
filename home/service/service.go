@@ -71,7 +71,7 @@ func (s *Service) BuildFeed(ctx context.Context, accountID string) (entity.Feed,
 	feed.Banners = buildBanners(banners, active, known, deals)
 
 	if items := sponsoredItems(rail, known, deals); len(items) > 0 {
-		feed.Sections = append(feed.Sections, entity.Section{Kind: entity.SectionSponsored, Title: "Sponsored", Items: items})
+		feed.Sections = append(feed.Sections, entity.Section{Kind: entity.SectionSponsored, Title: "Featured near you", Items: items})
 	}
 	if items := dealItems(catalog, deals); len(items) > 0 {
 		feed.Sections = append(feed.Sections, entity.Section{Kind: entity.SectionDeals, Title: "Popular deals in your area", Items: items})
